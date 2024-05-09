@@ -1,0 +1,33 @@
+dateModified: 1715261682
+email:
+  fromEmail: Dario.DiGiacomo@student.pxl.be
+  fromName: 'Duikclub Dolfijn'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/files/images'
+    type: craft\fs\Local
+    url: /files/images
+meta:
+  __names__:
+    47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
+    82d7d074-f812-4c3c-a7c2-e94695f6b1f4: 'Duikclub Dolfijn' # Duikclub Dolfijn
+    7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
+    c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
+    c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
+system:
+  edition: solo
+  live: true
+  name: 'Duikclub Dolfijn'
+  schemaVersion: 5.0.0.20
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
