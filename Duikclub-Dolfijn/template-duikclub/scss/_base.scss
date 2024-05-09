@@ -1,0 +1,44 @@
+//Colors
+$color-white: #fff;
+$color-black: #222222;
+
+$color-primary: #0D7EE5;
+$color-secondary: #BFD3D9;
+$color-accent: #012336;
+
+//Fonts
+$font-grotesk: 'Stage Grotesk', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font-grotesk;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: $color-black;
+}
+
+@mixin header_text($font-size: 48px) {
+    font-size: $font-size;
+    font-weight: 700;
+}
+
+@mixin title_text($font-size: 24px) {
+    font-size: $font-size;
+    font-weight: 500;
+}
+
+@mixin paragraph_text($font-size: 16px) {
+    font-size: $font-size;
+    font-weight: 300;
+}
+
+@mixin footer_text($font-size: 16px) {
+    font-size: $font-size;
+    font-weight: 300;
+}
