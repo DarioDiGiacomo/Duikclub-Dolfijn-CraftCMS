@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  a7dd54fc-ef58-4af8-8a8f-8b96435f86d8:
+  7f9e42ae-9f72-4048-9306-eb89be450e51:
     tabs:
       -
         elementCondition: null
@@ -16,7 +16,7 @@ fieldLayouts:
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: Plaats
             max: null
             min: null
             name: null
@@ -30,44 +30,29 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 4b52a3dd-4728-4494-a414-48c6cb5c5f82
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5f1fff2e-390f-45a5-97a8-d1dc739a890d
+            uid: ca894d5d-a6d1-4351-8702-540277832fb8
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
             fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
-            handle: HeroTagLine
+            handle: duikTitle
             includeInCards: false
             instructions: null
-            label: HeroTagline
+            label: 'Duik Title'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 03d9cec9-3652-4fbf-81bd-bbc50bf58a02
+            uid: 9b5cad12-ae8e-4745-8ff2-ec44e754ee7b
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: b63f96f3-641c-45b7-b75d-ee3f8a5fce01
+            uid: aca6b6f8-f4d0-4249-a4d5-755090a73921
             userCondition: null
           -
             elementCondition: null
@@ -80,57 +65,71 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 41e269fd-fa0f-4794-a59e-4f80bc7e9bb6
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: a929e144-72f1-40c6-bd10-bc396a2d7696 # Logo
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0f1058fa-28dc-420e-9db5-7acf19c9a665
-            userCondition: null
-            warning: null
-            width: 50
-        name: Hero
-        uid: 72bf1b4e-e248-4fa8-8990-d9821d93d78c
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: a1f5ff61-2261-4570-be4f-b52acd6857cb # Images
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e3845c18-a16e-4df6-b667-cec38bff2d29
+            uid: 3618a8f3-026b-49cd-ae53-6ae8ad4fedb1
             userCondition: null
             warning: null
             width: 100
-        name: Sponsors
-        uid: f95e22ef-b8c5-442e-ba3d-b7084483a55b
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\LineBreak
+            uid: 0bb2dd0f-2b45-486b-ba8c-472b4906f2d4
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: f47a425f-ef1d-40ce-9674-1a0c7e59a56b # Datum
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cf948c6-05f2-46a9-a54b-f1a55afec27f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: db3a5384-72e7-41bd-9a3e-73c0c097b964 # Begin Uur
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33825e51-7c7c-4163-84bc-ef00324e7537
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: fb125a24-cfc8-4055-b270-9a13e3c0cfe4 # Eind Uur
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23cd1297-e522-4449-95d2-2ba98080dfbe
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: a1f8342f-22c4-431a-94c2-7c019b702b6c
         userCondition: null
-handle: home
-hasTitleField: false
-icon: house
-name: Home
+handle: duiken
+hasTitleField: true
+icon: person-swimming
+name: Duiken
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: Home
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

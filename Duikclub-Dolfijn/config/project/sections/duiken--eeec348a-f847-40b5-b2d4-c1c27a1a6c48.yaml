@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 47bec586-931e-4fb9-ae84-2b33e28cee23 # Home
-handle: home
+  - 8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d # Duiken
+handle: duiken
 maxAuthors: 1
-name: Home
+name: Duiken
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,9 @@ siteSettings:
   82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
     enabledByDefault: true
     hasUrls: true
-    template: home.twig
-    uriFormat: __home__
-type: single
+    template: duiken/_entry
+    uriFormat: 'duiken/{slug}'
+structure:
+  maxLevels: null
+  uid: 2cbf3110-b237-4bc5-bd78-1c625518fa7e
+type: structure
