@@ -25,9 +25,9 @@
 
     <div class="opkomendeDuiken">
         <h1 class="opkomendeDuiken-title">Opkomende Duiken</h1>
-        {% for duiken in craft.entries.section('duiken').all() %}
-             {% include "snippets/_card.twig" with { 'duiken': duiken } %}
-        {% endfor %}
+            {% for duiken in craft.entries.section('duiken').all() %}
+                {% include "snippets/_card.twig" with { 'duiken': duiken } %}
+            {% endfor %}
     </div>
 
 
