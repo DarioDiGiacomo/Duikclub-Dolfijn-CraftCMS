@@ -17,7 +17,8 @@
 
     &-text {
         position: absolute;
-        margin-left: 20px;
+        margin-left: 30px;
+
         .header-title {
             display: flex;
             flex-direction: column;
@@ -34,6 +35,7 @@
         }
         p {
             @include paragraph_text();
+            font-weight: 400;
         }
         span {
             font-size: 20px;
@@ -45,6 +47,7 @@
 
 .info {
     min-width: 360px;
+    margin-top: 20px;
 
     &-content {
         display: flex;
@@ -63,7 +66,7 @@
 
         p {
             @include paragraph_text();
-            margin: 10px 50px 0 30px;
+            margin: 10px 30px 0 30px;
         }
     }
 
@@ -90,19 +93,18 @@
 
     &-wrapper {
         display: flex;
-        flex-direction: row;
-        overflow-x: scroll;
-        padding: 0 30px;
-        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px 30px 0 30px;
+        gap: 20px;
     }
 
     &-card {
         background: linear-gradient(45deg, #0D599D, #0D7EE5);
         border-radius: 5px;
-        width: 100%;
         padding: 10px 15px;
-        // overflow: hidden;
-        margin: 25px 0 0 0;
+
+        width: calc(100%);
 
         h1, p {
             color: $color-white;
@@ -126,12 +128,140 @@
 
             .card-button {
                 background-color: $color-white;
-                margin-left: 14px;
+                // margin-left: 14px;
                 
                 a {
                     color: $color-primary;
                     text-decoration: none;
                 }
+            }
+        }
+    }
+}
+
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .banner {
+        &-text {
+            margin-left: 60px;
+
+            .header-title {
+                h1 {
+                    @include header_text(90px);
+                }
+                #title-size {
+                    @include header_text(110px);
+                }
+            }
+            p {
+                @include paragraph_text(24px);
+                font-weight: 400;
+            }
+            span {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .info {
+        &-content {
+            h1 {
+                @include title_text(36px);
+                margin: 25px 0 0 50px;
+            }
+            p {
+                width: 60%;
+                @include paragraph_text(24px);
+                margin: 10px 0 0 50px;
+            }
+        }
+        &-button {
+            margin: 20px 0 0 50px;
+        }
+    }
+
+    .opkomendeDuiken {
+        &-title {
+            @include title_text(36px);
+            margin: 25px 0 0 50px;
+        }
+        &-wrapper {
+            gap: 20px;
+            margin: 20px 50px 0 50px;
+        }
+        &-card {
+            width: calc(50% - 10px);
+
+            h1 {
+                @include title_text(30px);
+            }
+
+            p {
+                @include paragraph_text(20px);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .banner {
+        &-text {
+            margin-left: 100px;
+
+            .header-title {
+                h1 {
+                    @include header_text(140px);
+                }
+                #title-size {
+                    @include header_text(160px);
+                }
+            }
+            p {
+                @include paragraph_text(36px);
+                font-weight: 400;
+            }
+            span {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .info {
+        &-content {
+            h1 {
+                @include title_text(42px);
+                margin: 25px 0 0 100px;
+            }
+            p {
+                width: 60%;
+                @include paragraph_text(32px);
+                margin: 10px 0 0 100px;
+            }
+        }
+        &-button {
+            margin: 20px 0 0 100px;
+        }
+    }
+
+    .opkomendeDuiken {
+        &-title {
+            @include title_text(42px);
+            margin: 25px 0 0 100px;
+        }
+        &-wrapper {
+            gap: 20px;
+            margin: 20px 100px 0 100px;
+        }
+        &-card {
+            width: calc(33.33% - 20px);
+
+            h1 {
+                @include title_text(36px);
+            }
+
+            p {
+                @include paragraph_text(26px);
             }
         }
     }

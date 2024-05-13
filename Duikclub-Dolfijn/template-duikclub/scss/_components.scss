@@ -13,7 +13,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        // background-image: url(../assets/images/logos/Dolfijn.png);
+        background-image: url(../../template-duikclub/assets/images/animals/3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -21,7 +21,7 @@
     .logo {
         width: 100px;
         height: 100px;
-        // background-image: url(../assets/images/logos/Dolfijn.png);
+        background-image: url(../../template-duikclub/assets/images/logos/Dolfijn.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -33,18 +33,18 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.85);
         z-index: 1000;
 
         ul {
             list-style-type: none;
             padding: 0;
-            margin: 100px 0 0 0;
+            margin: 0 0 0 0;
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 50px;
             height: 100%;
             
 
@@ -92,14 +92,17 @@
             .line:nth-child(1) {
                 transform: rotate(45deg);
                 top: 10px;
+                // margin-right: 10px;
             }
             .line:nth-child(2) {
                 opacity: 0;
+                // margin-right: 10px;
             }
             .line:nth-child(3) {
                 transform: rotate(-45deg);
                 top: 10px;
                 width: 100%;
+                // margin-right: 10px;
             }
         }
     }
@@ -107,9 +110,6 @@
 
 //Footer
 .footer {
-    // position: fixed;
-    // bottom: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +120,7 @@
 
     p {
         margin-top: 15px;
-        @include footer_text($font-size: 12px);
+        @include footer_text(12px);
     }
 
     &-text {
@@ -145,8 +145,18 @@
 
         a {
             color: $color-white;
-            @include footer_text($font-size: 14px);
+            @include footer_text(14px);
         }
+    }
+
+    &-social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        margin: 10px 0 20px 0;
+        gap: 20px;
     }
 
     &-federations {
@@ -193,6 +203,119 @@
 }
 
 .standard-button:hover {
-    background-color: #2980ab;
+    background-color: #2e96cb;
 }
 
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .standard-button {
+        font-size: 20px;
+        padding: 14px 24px;
+    }
+
+    .navigation {
+        padding: 0 60px;
+
+        .profile-picture {
+            width: 45px;
+            height: 45px;
+        }
+        .logo {
+            width: 140px;
+            height: 140px;
+        }
+        #menu-overlay {
+            ul {
+                li {
+                    a {
+                        font-size: 38px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-text {
+            h2 {
+                @include title_text(36px);
+                font-weight: 700;
+            }
+        }
+
+        &-links {
+            a {
+                @include footer_text(20px);
+            }
+        }
+
+        p {
+            margin-top: 15px;
+            @include footer_text(20px);
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .standard-button {
+        font-size: 26px;
+        padding: 18px 30px;
+    }
+
+    .navigation {
+        padding: 0 100px;
+
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+        }
+        .logo {
+            width: 140px;
+            height: 140px;
+        }
+        #menu-overlay {
+            li {
+                a {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-text {
+            h2 {
+                @include title_text(40px);
+                font-weight: 700;
+            }
+        }
+
+        &-links {
+            a {
+                @include footer_text(24px);
+            }
+        }
+
+        &-federations {
+            gap: 60px;
+
+            img {
+                width: 10%;
+    
+                &:nth-child(1){
+                    width: 11%;
+                }
+    
+                &:nth-child(3){
+                    width: 6%;
+                }
+            }
+        }
+
+        p {
+            margin-top: 30px;
+            @include footer_text(24px);
+        }
+    }
+}
