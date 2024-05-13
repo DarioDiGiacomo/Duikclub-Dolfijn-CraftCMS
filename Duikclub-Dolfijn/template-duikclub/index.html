@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duikclub Dolfijn</title>
 
+    <!-- Scripts -->
+    <script src="../web/scripts/navigation_menu.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="../web/css/main.css">
 
@@ -19,10 +22,21 @@
     <div class="navigation">
         <div class="profile-picture"></div>
         <div class="logo"></div>
-        <div class="menu-icon">
+        <div class="menu-icon" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
+        </div>
+
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="#">Duiken</a></li>
+                <li><a href="#">Gallerij</a></li>
+                <li><a href="#">Evenementen</a></li>
+                <li><a href="#">Leden</a></li>
+                <li><a href="#">Over ons</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </div>
 
@@ -63,6 +77,28 @@
             <div class="opkomendeDuiken-card">
                 <h1>Great Orange Hole</h1>
                 <p>10 oktober | 18:00 - 19:00</p>
+                <p>Belize</p>
+    
+                <div class="opkomendeDuiken-card-bottom">
+                    <p>Plaatsen: 4/20</p>
+                    <button class="standard-button card-button"><a href="#">DETAILS</a></button>
+                </div>
+            </div>
+
+            <div class="opkomendeDuiken-card">
+                <h1>Great Red Hole</h1>
+                <p>10 september | 18:00 - 19:00</p>
+                <p>Belize</p>
+    
+                <div class="opkomendeDuiken-card-bottom">
+                    <p>Plaatsen: 4/20</p>
+                    <button class="standard-button card-button"><a href="#">DETAILS</a></button>
+                </div>
+            </div>
+
+            <div class="opkomendeDuiken-card">
+                <h1>Great Green Hole</h1>
+                <p>10 december | 18:00 - 19:00</p>
                 <p>Belize</p>
     
                 <div class="opkomendeDuiken-card-bottom">

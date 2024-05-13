@@ -8,7 +8,7 @@
     min-width: 360px;
     
     img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         transform: scaleX(-1);
         opacity: 60%;
@@ -90,7 +90,9 @@
     &-wrapper {
         display: flex;
         flex-direction: row;
-        overflow: scroll;
+        overflow-x: scroll;
+        padding: 0 30px;
+        gap: 30px;
     }
 
     &-card {
@@ -99,7 +101,7 @@
         width: 100%;
         padding: 10px 15px;
         // overflow: hidden;
-        margin: 25px 0 0 30px;
+        margin: 25px 0 0 0;
 
         h1, p {
             color: $color-white;
