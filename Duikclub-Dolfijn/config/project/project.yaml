@@ -1,4 +1,4 @@
-dateModified: 1715284175
+dateModified: 1715599013
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -20,6 +20,8 @@ meta:
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
     a1f5ff61-2261-4570-be4f-b52acd6857cb: Images # Images
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
+    b4a04054-6677-4313-96a7-c2bfffe94857: 'Contact Form' # Contact Form
+    c0355e3c-cfe1-4863-a306-b5e2635e449a: New # New
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
@@ -27,6 +29,12 @@ meta:
     eeec348a-f847-40b5-b2d4-c1c27a1a6c48: Duiken # Duiken
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
+plugins:
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: 1BHM1AE5K8W50UF1CG7WUDLA
+    schemaVersion: 3.4.4
 system:
   edition: solo
   live: true
