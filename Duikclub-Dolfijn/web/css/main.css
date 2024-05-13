@@ -221,16 +221,21 @@ body {
   color: #fff;
   margin: 25px 0 0 30px;
 }
+.opkomendeDuiken-wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
 .opkomendeDuiken-card {
   background: linear-gradient(45deg, #0D599D, #0D7EE5);
   border-radius: 5px;
-  width: 250px;
+  width: 100%;
   padding: 10px 15px;
-  overflow: hidden;
   margin: 25px 0 0 30px;
 }
 .opkomendeDuiken-card h1, .opkomendeDuiken-card p {
   color: #fff;
+  white-space: nowrap;
 }
 .opkomendeDuiken-card h1 {
   font-size: 24px;
@@ -243,6 +248,7 @@ body {
 .opkomendeDuiken-card-bottom {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: end;
   margin-top: 20px;
 }
