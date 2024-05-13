@@ -33,12 +33,12 @@
 	</div>
 
 	<div class="opkomendeDuiken">
-		<div class="opkomendeDuiken-cards">
-			<h1 class="opkomendeDuiken-title">Opkomende Duiken</h1>
-			{% for duiken in craft.entries.section('duiken').all() %}
-				{% include "snippets/_card.twig" with { 'duiken': duiken } %}
-			{% endfor %}
-		</div>
+        <h1 class="opkomendeDuiken-title">Opkomende Duiken</h1>
+        <div class="opkomendeDuiken-wrapper">
+            {% for duiken in craft.entries.section('duiken').all() %}
+                {% include "snippets/_card.twig" with { 'duiken': duiken } %}
+            {% endfor %}
+        </div>
 	</div>
 
 
