@@ -8,6 +8,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Duikclub Dolfijn</title>
 
+		<!-- Scripts -->
+		<script src="{{siteUrl}}scripts/navigation_menu.js"></script>
+
 		<!-- CSS -->
 		<link
 		rel="stylesheet" href="{{siteUrl}}css/main.css">
@@ -23,10 +26,21 @@
 		<div class="navigation">
 			<div class="profile-picture" style="background-image: url('{{image.url}}');"></div>
 			<div class="logo" style="background-image: url('{{logo.url}}');"></div>
-			<div class="menu-icon">
+			<div class="menu-icon" onclick="toggleMenu()">
 				<div class="line"></div>
 				<div class="line"></div>
 				<div class="line"></div>
+			</div>
+
+			<div id="menu-overlay">
+				<ul>
+					<li><a href="#">Duiken</a></li>
+					<li><a href="#">Gallerij</a></li>
+					<li><a href="#">Evenementen</a></li>
+					<li><a href="#">Leden</a></li>
+					<li><a href="#">Over ons</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 			</div>
 		</div>
 		{% block content %}{% endblock %}
