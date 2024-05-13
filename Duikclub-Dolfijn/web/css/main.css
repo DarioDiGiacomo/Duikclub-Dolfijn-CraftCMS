@@ -17,7 +17,7 @@ body {
 }
 
 .navigation {
-  height: 70px;
+  height: 8svh;
   min-width: 360px;
   display: flex;
   justify-content: space-between;
@@ -194,7 +194,8 @@ body {
 }
 .banner img {
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  max-height: 92svh;
   transform: scaleX(-1);
   opacity: 60%;
 }
