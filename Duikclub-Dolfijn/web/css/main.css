@@ -31,6 +31,10 @@ body {
   background-image: url(../../template-duikclub/assets/images/animals/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1001;
+}
+.navigation a {
+  z-index: 1001;
 }
 .navigation .logo {
   width: 100px;
@@ -102,6 +106,58 @@ body {
   transform: rotate(-45deg);
   top: 10px;
   width: 100%;
+}
+
+.section {
+  min-width: 360px;
+  margin-top: 50px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin: 25px 0 0 30px;
+}
+.section-wrapper {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: 20px 30px 0 30px;
+  gap: 20px;
+}
+.section-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #0D599D, #0D7EE5);
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+}
+.section-card h1, .section-card p {
+  color: #fff;
+}
+.section-card h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.section-card p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.section-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 20px;
+}
+.section-card-bottom a {
+  text-decoration: none;
+}
+.section-card-bottom a .card-button {
+  color: #0D7EE5;
+  background-color: #fff;
 }
 
 .footer {
@@ -219,6 +275,26 @@ body {
   .navigation #menu-overlay ul li a {
     font-size: 38px;
   }
+  .section-title {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 25px 0 0 50px;
+  }
+  .section-wrapper {
+    gap: 20px;
+    margin: 20px 50px 0 50px;
+  }
+  .section-card {
+    width: calc(50% - 10px);
+  }
+  .section-card h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .section-card p {
+    font-size: 20px;
+    font-weight: 300;
+  }
   .footer-text h2 {
     font-size: 36px;
     font-weight: 500;
@@ -246,14 +322,40 @@ body {
     padding: 18px 30px;
   }
   .navigation {
+    height: 10svh;
     padding: 0 100px;
   }
   .navigation .profile-picture {
     width: 50px;
     height: 50px;
   }
+  .navigation .logo {
+    width: 150px;
+    height: 150px;
+  }
   .navigation #menu-overlay li a {
+    margin-left: 30px;
     font-size: 50px;
+  }
+  .section-title {
+    font-size: 42px;
+    font-weight: 500;
+    margin: 25px 0 0 100px;
+  }
+  .section-wrapper {
+    gap: 20px;
+    margin: 20px 100px 0 100px;
+  }
+  .section-card {
+    width: calc(25% - 20px);
+  }
+  .section-card h1 {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .section-card p {
+    font-size: 26px;
+    font-weight: 300;
   }
   .footer-text h2 {
     font-size: 40px;
@@ -298,7 +400,7 @@ body {
 .banner img {
   width: 100%;
   object-fit: cover;
-  max-height: 92svh;
+  max-height: 90svh;
   transform: scaleX(-1);
   filter: brightness(70%);
 }
@@ -358,56 +460,6 @@ body {
   margin: 20px 0 0 30px;
 }
 
-.opkomendeDuiken {
-  min-width: 360px;
-  margin-top: 50px;
-}
-.opkomendeDuiken-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-  margin: 25px 0 0 30px;
-}
-.opkomendeDuiken-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 20px 30px 0 30px;
-  gap: 20px;
-}
-.opkomendeDuiken-card {
-  background: linear-gradient(45deg, #0D599D, #0D7EE5);
-  border-radius: 5px;
-  padding: 10px 15px;
-  width: 100%;
-}
-.opkomendeDuiken-card h1, .opkomendeDuiken-card p {
-  color: #fff;
-  white-space: nowrap;
-}
-.opkomendeDuiken-card h1 {
-  font-size: 24px;
-  font-weight: 500;
-}
-.opkomendeDuiken-card p {
-  font-size: 16px;
-  font-weight: 300;
-}
-.opkomendeDuiken-card-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
-  margin-top: 20px;
-}
-.opkomendeDuiken-card-bottom .card-button {
-  background-color: #fff;
-}
-.opkomendeDuiken-card-bottom .card-button a {
-  color: #0D7EE5;
-  text-decoration: none;
-}
-
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
   .banner-text {
     margin-left: 60px;
@@ -442,30 +494,10 @@ body {
   .info-button {
     margin: 20px 0 0 50px;
   }
-  .opkomendeDuiken-title {
-    font-size: 36px;
-    font-weight: 500;
-    margin: 25px 0 0 50px;
-  }
-  .opkomendeDuiken-wrapper {
-    gap: 20px;
-    margin: 20px 50px 0 50px;
-  }
-  .opkomendeDuiken-card {
-    width: calc(50% - 10px);
-  }
-  .opkomendeDuiken-card h1 {
-    font-size: 30px;
-    font-weight: 500;
-  }
-  .opkomendeDuiken-card p {
-    font-size: 20px;
-    font-weight: 300;
-  }
 }
 @media only screen and (min-width: 1366px) {
   .banner-text {
-    margin-left: 100px;
+    margin: 0 0 70px 100px;
   }
   .banner-text .header-title h1 {
     font-size: 140px;
@@ -497,26 +529,6 @@ body {
   .info-button {
     margin: 20px 0 0 100px;
   }
-  .opkomendeDuiken-title {
-    font-size: 42px;
-    font-weight: 500;
-    margin: 25px 0 0 100px;
-  }
-  .opkomendeDuiken-wrapper {
-    gap: 20px;
-    margin: 20px 100px 0 100px;
-  }
-  .opkomendeDuiken-card {
-    width: calc(33.33% - 20px);
-  }
-  .opkomendeDuiken-card h1 {
-    font-size: 36px;
-    font-weight: 500;
-  }
-  .opkomendeDuiken-card p {
-    font-size: 26px;
-    font-weight: 300;
-  }
 }
 .hidden {
   display: none !important;
@@ -533,14 +545,13 @@ body {
 .duiken-banner img {
   width: 100%;
   object-fit: cover;
-  max-height: 92svh;
+  max-height: 90svh;
   filter: brightness(70%);
 }
 .duiken-banner-content {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 80%;
   gap: 10px;
@@ -558,12 +569,68 @@ body {
 .duiken-banner-content .bottom-text {
   display: flex;
   gap: 15px;
+  margin-top: 40px;
 }
 .duiken-banner-content .bottom-text a {
   font-size: 14px;
   font-weight: 300;
   font-weight: 400;
-  color: white;
+  color: #fff;
+}
+
+.opleiding-card {
+  overflow: hidden;
+}
+.opleiding-card p {
+  margin-top: 5px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.opleiding-card-bottom {
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+  .duiken-banner-content {
+    gap: 20px;
+  }
+  .duiken-banner-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+  }
+  .duiken-banner-content p {
+    font-size: 28px;
+    font-weight: 300;
+  }
+  .duiken-banner-content .bottom-text a {
+    font-size: 26px;
+    font-weight: 300;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .duiken-banner-content {
+    gap: 30px;
+  }
+  .duiken-banner-content h1 {
+    font-size: 110px;
+    font-weight: 700;
+  }
+  .duiken-banner-content p {
+    width: 70%;
+    font-size: 36px;
+    font-weight: 300;
+  }
+  .duiken-banner-content .bottom-text {
+    gap: 80px;
+  }
+  .duiken-banner-content .bottom-text a {
+    font-size: 26px;
+    font-weight: 300;
+    font-weight: 400;
+    color: #fff;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
