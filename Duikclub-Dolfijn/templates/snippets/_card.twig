@@ -1,9 +1,9 @@
 <div class="opkomendeDuiken-card">
-    <h1>{{duiken.title}}</h1>
-    <p>{{duiken.datum | date("d F", locale="nl-BE")}} | {{duiken.beginUur | date("H:i")}} - {{duiken.eindUur | date("H:i")}}</p>
-    <p>{{duiken.duikTitle}}</p>
+    <h1>{{card.title}}</h1>
+    <p>{{card.datum | date("d F", locale="nl-BE")}} | {{card.beginUur | date("H:i")}} - {{card.eindUur | date("H:i")}}</p>
+    <p>{{card.duikTitle}}</p>
     <div class="opkomendeDuiken-card-bottom">
         <p>Plaatsen: 4/20</p>
-        <button class="standard-button card-button"><a href="{{duiken.url}}">DETAILS</a></button>      
+        <button class="standard-button card-button"><a href="{{card.url}}">DETAILS</a></button>      
     </div>
 </div>

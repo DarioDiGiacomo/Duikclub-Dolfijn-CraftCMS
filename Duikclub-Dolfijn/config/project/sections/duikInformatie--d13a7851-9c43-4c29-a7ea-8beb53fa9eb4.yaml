@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - f263234d-f7ec-401f-a32a-98b006d5cbc1 # Duik Informatie
+handle: duikInformatie
+maxAuthors: 1
+name: 'Duik Informatie'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
+    enabledByDefault: true
+    hasUrls: true
+    template: _duik-informatie/_entry
+    uriFormat: 'duik-informatie/{slug}'
+structure:
+  maxLevels: 1
+  uid: 6704adf4-81bb-470b-a455-19bfee1dee7d
+type: structure
