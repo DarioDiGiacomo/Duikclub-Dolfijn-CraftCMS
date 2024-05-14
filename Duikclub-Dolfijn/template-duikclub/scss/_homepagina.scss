@@ -12,7 +12,7 @@
         object-fit: cover;
         max-height: 92svh;
         transform: scaleX(-1);
-        opacity: 60%;
+        filter:brightness(70%);
     }
 
     &-text {
@@ -72,12 +72,6 @@
 
     &-button {
         margin: 20px 0 0 30px;
-
-        a {
-            color: $color-white;
-            font-weight: 500;
-            text-decoration: none;
-        }
     }
 }
 
