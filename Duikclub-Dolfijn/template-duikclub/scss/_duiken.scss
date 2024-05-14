@@ -16,7 +16,7 @@
     img {
         width: 100%;
         object-fit: cover;
-        max-height: 92svh;
+        max-height: 90svh;
         filter: brightness(70%);
     }
 
@@ -24,7 +24,6 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
 
         width: 80%;
@@ -42,11 +41,74 @@
         .bottom-text {
             display: flex;
             gap: 15px;
+            margin-top: 40px;
         
             a {
                 @include paragraph_text(14px);
                 font-weight: 400;
-                color: white;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.opleiding-card {
+    overflow: hidden;
+
+    p {
+        margin-top: 5px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    &-bottom {
+        justify-content: flex-end;
+    }
+}
+
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .duiken-banner {
+        &-content {
+            gap: 20px;
+
+            h1 {
+                @include header_text(70px);
+            }
+            p {
+                @include paragraph_text(28px);
+            }
+            .bottom-text {             
+                a {
+                    @include paragraph_text(26px);
+                    font-weight: 400;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .duiken-banner {
+        &-content {
+            gap: 30px;
+
+            h1 {
+                @include header_text(110px);
+            }
+            p {
+                width: 70%;
+                @include paragraph_text(36px);
+            }
+            .bottom-text {    
+                gap: 80px;         
+                a {
+                    @include paragraph_text(26px);
+                    font-weight: 400;
+                    color: $color-white;
+                }
             }
         }
     }
