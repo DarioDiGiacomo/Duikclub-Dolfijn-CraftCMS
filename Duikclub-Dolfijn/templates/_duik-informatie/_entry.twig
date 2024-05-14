@@ -1,0 +1,23 @@
+{% extends "index" %}
+
+{% set image = home.image.one()  %}
+
+
+{% block content %}
+    <div class="duiken-wrapper" id="content1">
+        <div class="duiken-banner">
+            <img src="{{image.url}}" alt="banner_home">
+            <div class="duiken-banner-content">
+                <h1>Duiksport</h1>
+                <p>Ben je benieuwd naar de verschillende opleidingen binnen duiken en welke brevetten er te behalen zijn?</p>
+
+                <div class="bottom-text">
+                    <a href="#" class="rotate-link" data-content="content1">Duiksport</a>
+                    <a href="#" class="rotate-link" data-content="content2">Prijs</a>
+                    <a href="#" class="rotate-link" data-content="content3">Initiatie</a>
+                    <a href="#" class="rotate-link" data-content="content4">Duikplaatsen</a>
+                </div>
+            </div>
+        </div>    
+    </div>    
+{% endblock %}

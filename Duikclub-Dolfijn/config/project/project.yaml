@@ -1,4 +1,4 @@
-dateModified: 1715680612
+dateModified: 1715708798
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -25,11 +25,13 @@ meta:
     b3e80fbc-2d4e-4e11-8416-807344ea998f: 'Contact Form' # Contact Form
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
+    d13a7851-9c43-4c29-a7ea-8beb53fa9eb4: 'Duik Informatie' # Duik Informatie
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
     db3a5384-72e7-41bd-9a3e-73c0c097b964: 'Begin Uur' # Begin Uur
     eeec348a-f847-40b5-b2d4-c1c27a1a6c48: Duiken # Duiken
     f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
+    f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
 plugins:
   formie:
