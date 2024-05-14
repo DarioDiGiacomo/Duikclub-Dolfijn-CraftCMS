@@ -1,4 +1,4 @@
-dateModified: 1715626437
+dateModified: 1715680612
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -15,12 +15,14 @@ meta:
   __names__:
     3f5bba28-6c17-495e-ba00-f8ba434e02b4: 'Public Schema' # Public Schema
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
+    08ecdef1-1d02-4135-b1ae-bcc230e36bbd: New # New
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
     82d7d074-f812-4c3c-a7c2-e94695f6b1f4: 'Duikclub Dolfijn' # Duikclub Dolfijn
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
     a1f5ff61-2261-4570-be4f-b52acd6857cb: Images # Images
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
+    b3e80fbc-2d4e-4e11-8416-807344ea998f: 'Contact Form' # Contact Form
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
@@ -29,6 +31,12 @@ meta:
     f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
+plugins:
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: M02SZVUPL96YBZ6FB11RRZYD
+    schemaVersion: 3.4.4
 system:
   edition: pro
   live: true
