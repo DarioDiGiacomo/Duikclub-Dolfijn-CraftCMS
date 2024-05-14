@@ -21,9 +21,10 @@
     .logo {
         width: 100px;
         height: 100px;
-        background-image: url(../../template-duikclub/assets/images/logos/Dolfijn.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        
+        // background-image: url(../../template-duikclub/assets/images/logos/Dolfijn.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
     }
 
     #menu-overlay {
@@ -142,6 +143,7 @@
         align-items: center;
         flex-direction: column;
         gap: 5px;
+        margin: 5px 0;
 
         a {
             color: $color-white;
@@ -151,19 +153,22 @@
 
     &-social {
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
 
-        margin: 10px 0 20px 0;
+        margin: 20px 0 20px 0;
         gap: 20px;
+
+        i {
+            font-size: 20px;
+        }
     }
 
     &-federations {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         img {
             width: 20%;
 
@@ -200,6 +205,12 @@
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+
+    a {
+        color: $color-white;
+        font-weight: 500;
+        text-decoration: none;
+    }
 }
 
 .standard-button:hover {
@@ -245,8 +256,15 @@
         }
 
         &-links {
+            margin: 10px 0;
             a {
                 @include footer_text(20px);
+            }
+        }
+
+        &-social {
+            i {
+                font-size: 30px;
             }
         }
 
@@ -270,10 +288,6 @@
             width: 50px;
             height: 50px;
         }
-        .logo {
-            width: 140px;
-            height: 140px;
-        }
         #menu-overlay {
             li {
                 a {
@@ -292,8 +306,15 @@
         }
 
         &-links {
+            margin: 20px 0;
             a {
                 @include footer_text(24px);
+            }
+        }
+
+        &-social {
+            i {
+                font-size: 40px;
             }
         }
 

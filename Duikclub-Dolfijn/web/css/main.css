@@ -35,9 +35,6 @@ body {
 .navigation .logo {
   width: 100px;
   height: 100px;
-  background-image: url(../../template-duikclub/assets/images/logos/Dolfijn.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .navigation #menu-overlay {
   display: none;
@@ -139,6 +136,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+  margin: 5px 0;
 }
 .footer-links a {
   color: #fff;
@@ -147,17 +145,19 @@ body {
 }
 .footer-social {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
   gap: 20px;
+}
+.footer-social i {
+  font-size: 20px;
 }
 .footer-federations {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .footer-federations img {
   width: 20%;
@@ -190,6 +190,11 @@ body {
   vertical-align: middle;
   white-space: nowrap;
 }
+.standard-button a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
 
 .standard-button:hover {
   background-color: #2e96cb;
@@ -219,9 +224,15 @@ body {
     font-weight: 500;
     font-weight: 700;
   }
+  .footer-links {
+    margin: 10px 0;
+  }
   .footer-links a {
     font-size: 20px;
     font-weight: 300;
+  }
+  .footer-social i {
+    font-size: 30px;
   }
   .footer p {
     margin-top: 15px;
@@ -241,10 +252,6 @@ body {
     width: 50px;
     height: 50px;
   }
-  .navigation .logo {
-    width: 140px;
-    height: 140px;
-  }
   .navigation #menu-overlay li a {
     font-size: 50px;
   }
@@ -253,9 +260,15 @@ body {
     font-weight: 500;
     font-weight: 700;
   }
+  .footer-links {
+    margin: 20px 0;
+  }
   .footer-links a {
     font-size: 24px;
     font-weight: 300;
+  }
+  .footer-social i {
+    font-size: 40px;
   }
   .footer-federations {
     gap: 60px;
@@ -287,7 +300,7 @@ body {
   object-fit: cover;
   max-height: 92svh;
   transform: scaleX(-1);
-  opacity: 60%;
+  filter: brightness(70%);
 }
 .banner-text {
   position: absolute;
@@ -343,11 +356,6 @@ body {
 }
 .info-button {
   margin: 20px 0 0 30px;
-}
-.info-button a {
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
 }
 
 .opkomendeDuiken {
@@ -509,6 +517,53 @@ body {
     font-size: 26px;
     font-weight: 300;
   }
+}
+.hidden {
+  display: none !important;
+}
+
+.duiken-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-width: 360px;
+}
+.duiken-banner img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 92svh;
+  filter: brightness(70%);
+}
+.duiken-banner-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+}
+.duiken-banner-content h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+.duiken-banner-content p {
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 400;
+  text-align: center;
+}
+.duiken-banner-content .bottom-text {
+  display: flex;
+  gap: 15px;
+}
+.duiken-banner-content .bottom-text a {
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 400;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
