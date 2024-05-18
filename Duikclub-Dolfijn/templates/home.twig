@@ -32,11 +32,11 @@
 		</div>
 	</div>
 
-	<div class="opkomendeDuiken">
-		<h1 class="opkomendeDuiken-title">Opkomende Duiken</h1>
-		<div class="opkomendeDuiken-wrapper">
+	<div class="section">
+		<h1 class="section-title">Opkomende Duiken</h1>
+		<div class="section-wrapper">
 			{% for duiken in craft.entries.section('duiken').datum('>= ' ~ "now"|date("Y-m-d")).limit(8).orderBy('datum').all() %}
-				{% include "snippets/_card.twig" with { card: duiken } %}
+				{% include "snippets/_card.twig" with { card: duiken, duiken: true } %}
 			{% endfor %}
 		</div>
 	</div>

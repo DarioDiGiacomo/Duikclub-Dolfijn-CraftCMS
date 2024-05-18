@@ -1,4 +1,4 @@
-dateModified: 1715712010
+dateModified: 1716035439
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -14,12 +14,16 @@ fs:
 meta:
   __names__:
     3f5bba28-6c17-495e-ba00-f8ba434e02b4: 'Public Schema' # Public Schema
+    7a8cea59-b761-47c7-bd4e-6c20b48a95f4: 'Brevet Details' # Brevet Details
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
     08ecdef1-1d02-4135-b1ae-bcc230e36bbd: New # New
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
+    52a0697a-56b1-4445-891c-0cd70e4df0e8: 'Brevet Description' # Brevet Description
     82d7d074-f812-4c3c-a7c2-e94695f6b1f4: 'Duikclub Dolfijn' # Duikclub Dolfijn
+    83cb684c-fc16-44a8-8f54-27c09cc71efe: Gallerij # Gallerij
     95ab2b1b-2368-4922-b8a8-c721d305b0eb: links # links
     98cf5e85-dfb5-4bdb-a863-fea510a9f1f3: 'Link Destination' # Link Destination
+    6874a386-bc56-486c-8bf3-c4c3786ca273: brevetten # brevetten
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
     45646dc1-9e52-460d-896a-ff867284c170: 'Duik Informatie Nav' # Duik Informatie Nav
@@ -27,6 +31,7 @@ meta:
     a6b37a3b-7ccd-4cbb-ad27-24c18f19fc0c: NavLinks # NavLinks
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
     b3e80fbc-2d4e-4e11-8416-807344ea998f: 'Contact Form' # Contact Form
+    b5110f84-3345-43fe-9de9-d8d78725d14f: Brevetten # Brevetten
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
     d13a7851-9c43-4c29-a7ea-8beb53fa9eb4: 'Duik Informatie' # Duik Informatie
@@ -35,6 +40,7 @@ meta:
     eeec348a-f847-40b5-b2d4-c1c27a1a6c48: Duiken # Duiken
     f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
+    f281ce47-179e-4fed-ae32-f348a72e2505: Gallerij # Gallerij
     f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
 plugins:

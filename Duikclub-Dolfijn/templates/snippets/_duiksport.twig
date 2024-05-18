@@ -1,104 +1,107 @@
 <div class="section">
-				<h1 class="section-title">Opleidingen & Brevetten</h1>
-				<div class="section-wrapper">
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>1* Duiker</h1>
-							<p>Kennismakingsbrevet. Het laat toe in een beperkte tijd te leren duiken!</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
+	<h1 class="section-title">Opleidingen & Brevetten</h1>
+	<div class="section-wrapper">
+		{% for brevetten in craft.entries.section('brevetten').all() %}
+			{% include "snippets/_card.twig" with { card: brevetten, brevetten: true } %}
+		{% endfor %}
+		{# <div class="section-card opleiding-card">
+					<div>
+						<h1>1* Duiker</h1>
+						<p>Kennismakingsbrevet. Het laat toe in een beperkte tijd te leren duiken!</p>
 					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>2* Duiker</h1>
-							<p>Als 2* Duiker laat je bij wijze van spreken het handje van je begeleider los 
-																                        en neem je zelf het voortouw bij eenvoudige duiken tot maximaal 30 meter!</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>3* Duiker</h1>
-							<p>Een 3* Duiker heeft een dieptebeperking tot 40 meter. In grote lijnen is 
-																                        de opleiding 3* hetzelfde als 2* maar net dat niveautje hoger!</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>4* Duiker</h1>
-							<p>Zelfstandige duiker die in staat is duiken te leiden in alle wateren 
-																                        die courant bezocht worden door Belgische duikers!</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>Assistent-Instructeur</h1>
-							<p>Zelfstandige duiker die in staat is duiken te leiden in alle wateren 
-																                        die courant bezocht worden door Belgische duikers!</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>1* Instructeur</h1>
-							<p>CMAS 1*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>2* Instructeur</h1>
-							<p>CMAS 2*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
-					</div>
-
-					<div class="section-card opleiding-card">
-						<div>
-							<h1>3* Instructeur</h1>
-							<p>CMAS 3*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
-						</div>
-						<div class="section-card-bottom opleiding-card-bottom">
-							<a href="#">
-								<button class="standard-button card-button">DETAILS</button>
-							</a>
-						</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
 					</div>
 				</div>
-			</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>2* Duiker</h1>
+						<p>Als 2* Duiker laat je bij wijze van spreken het handje van je begeleider los 
+																							                        en neem je zelf het voortouw bij eenvoudige duiken tot maximaal 30 meter!</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>3* Duiker</h1>
+						<p>Een 3* Duiker heeft een dieptebeperking tot 40 meter. In grote lijnen is 
+																							                        de opleiding 3* hetzelfde als 2* maar net dat niveautje hoger!</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>4* Duiker</h1>
+						<p>Zelfstandige duiker die in staat is duiken te leiden in alle wateren 
+																							                        die courant bezocht worden door Belgische duikers!</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>Assistent-Instructeur</h1>
+						<p>Zelfstandige duiker die in staat is duiken te leiden in alle wateren 
+																							                        die courant bezocht worden door Belgische duikers!</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>1* Instructeur</h1>
+						<p>CMAS 1*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>2* Instructeur</h1>
+						<p>CMAS 2*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+		
+				<div class="section-card opleiding-card">
+					<div>
+						<h1>3* Instructeur</h1>
+						<p>CMAS 3*I, EN 14413-2, ISO 24802-2 (Level 2 instructeur)</p>
+					</div>
+					<div class="section-card-bottom opleiding-card-bottom">
+						<a href="#">
+							<button class="standard-button card-button">DETAILS</button>
+						</a>
+					</div>
+				</div>
+			</div> #}
+	</div>
