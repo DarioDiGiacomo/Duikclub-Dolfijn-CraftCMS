@@ -24,4 +24,4 @@ siteSettings:
     hasUrls: true
     template: _gallerij.twig
     uriFormat: gallerij
-type: single
+type: channel
