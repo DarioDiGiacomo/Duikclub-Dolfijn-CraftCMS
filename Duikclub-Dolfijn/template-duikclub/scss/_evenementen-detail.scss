@@ -1,0 +1,16 @@
+@use 'base' as *;
+
+.evenement-detail {
+    &-content {
+        h1 {
+            @include title_text(2rem);
+            font-weight: 700;
+            color: $color-primary;
+            margin-top: 1.25rem;
+        }
+
+        h2, p {
+            color: $color-white;
+        }
+    }
+}

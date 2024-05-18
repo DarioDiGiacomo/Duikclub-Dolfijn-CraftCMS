@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     color: $color-white;
-    min-width: 360px;
+    min-width: 22.5rem;
     
     img {
         width: 100%;
@@ -27,24 +27,24 @@
         align-items: center;
 
         width: 80%;
-        gap: 10px;
+        gap: 0.6rem;
 
         h1 {
-            @include header_text(34px);
+            @include header_text(2.15rem);
         }
         p {
-            @include paragraph_text(14px);
+            @include paragraph_text(0.9rem);
             font-weight: 400;
             text-align: center;
         }
 
         .bottom-text {
             display: flex;
-            gap: 15px;
-            margin-top: 40px;
+            gap: 0.9rem;
+            margin-top: 2.50rem;
         
             a {
-                @include paragraph_text(14px);
+                @include paragraph_text(0.9rem);
                 font-weight: 400;
                 color: $color-white;
             }
@@ -56,7 +56,7 @@
     overflow: hidden;
 
     p {
-        margin-top: 5px;
+        margin-top: 0.3rem;
         max-width: 100%;
         overflow-wrap: break-word;
     }
@@ -74,14 +74,14 @@
             gap: 20px;
 
             h1 {
-                @include header_text(70px);
+                @include header_text(4.4rem);
             }
             p {
-                @include paragraph_text(28px);
+                @include paragraph_text(1.75rem);
             }
             .bottom-text {             
                 a {
-                    @include paragraph_text(26px);
+                    @include paragraph_text(1.6rem);
                     font-weight: 400;
                     color: $color-white;
                 }
@@ -96,16 +96,16 @@
             gap: 30px;
 
             h1 {
-                @include header_text(110px);
+                @include header_text(6.9rem);
             }
             p {
                 width: 70%;
-                @include paragraph_text(36px);
+                @include paragraph_text(2.25rem);
             }
             .bottom-text {    
-                gap: 80px;         
+                gap: 5rem;         
                 a {
-                    @include paragraph_text(26px);
+                    @include paragraph_text(1.6rem);
                     font-weight: 400;
                     color: $color-white;
                 }

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     color: $color-white;
-    min-width: 360px;
+    min-width: 22.5rem;
     
     img {
         width: 100%;
@@ -17,20 +17,20 @@
 
     &-text {
         position: absolute;
-        margin-left: 30px;
+        margin-left: 1.9rem;
 
         .header-title {
             display: flex;
             flex-direction: column;
-            margin-bottom: 10px;
+            margin-bottom: 0.6rem;
 
             h1 {
-                @include header_text(40px);
-                margin-bottom: -10px;
+                @include header_text(2.5rem);
+                margin-bottom: -0.6rem;
             }
 
             #title-size {
-                @include header_text(60px);
+                @include header_text(3.75rem);
             }
         }
         p {
@@ -38,7 +38,7 @@
             font-weight: 400;
         }
         span {
-            font-size: 20px;
+            font-size: 1.25rem;
             color: $color-primary;
             font-weight: 500;
         }
@@ -46,8 +46,8 @@
 }
 
 .info {
-    min-width: 360px;
-    margin-top: 20px;
+    min-width: 22.5rem;
+    margin-top: 1.25rem;
 
     &-content {
         display: flex;
@@ -61,17 +61,17 @@
 
         h1 {
             @include title_text();
-            margin: 25px 0 0 30px;
+            margin: 1.55rem 0 0 1.9rem;
         }
 
         p {
             @include paragraph_text();
-            margin: 10px 30px 0 30px;
+            margin: 0.6rem 1.9rem 0 1.9rem;
         }
     }
 
     &-button {
-        margin: 20px 0 0 30px;
+        margin: 1.25rem 0 0 1.9rem;
     }
 }
 
@@ -79,22 +79,22 @@
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .banner {
         &-text {
-            margin-left: 60px;
+            margin-left: 3.75rem;
 
             .header-title {
                 h1 {
-                    @include header_text(90px);
+                    @include header_text(5.6rem);
                 }
                 #title-size {
-                    @include header_text(110px);
+                    @include header_text(6.9rem);
                 }
             }
             p {
-                @include paragraph_text(24px);
+                @include paragraph_text(1.5rem);
                 font-weight: 400;
             }
             span {
-                font-size: 28px;
+                font-size: 1.75rem;
             }
         }
     }
@@ -103,16 +103,16 @@
         &-content {
             h1 {
                 @include title_text(36px);
-                margin: 25px 0 0 50px;
+                margin: 1.55rem 0 0 3.15rem;
             }
             p {
                 width: 60%;
                 @include paragraph_text(24px);
-                margin: 10px 0 0 50px;
+                margin: 0.6rem 0 0 3.15rem;
             }
         }
         &-button {
-            margin: 20px 0 0 50px;
+            margin: 1.25rem 0 0 3.15rem;
         }
     }
 }
@@ -120,22 +120,22 @@
 @media only screen and (min-width: 1366px) {
     .banner {
         &-text {
-            margin: 0 0 70px 100px;
+            margin: 0 0 4.4rem 6.25rem;
 
             .header-title {
                 h1 {
-                    @include header_text(140px);
+                    @include header_text(8.75rem);
                 }
                 #title-size {
-                    @include header_text(160px);
+                    @include header_text(10rem);
                 }
             }
             p {
-                @include paragraph_text(36px);
+                @include paragraph_text(2.25rem);
                 font-weight: 400;
             }
             span {
-                font-size: 40px;
+                font-size: 2.5rem;
             }
         }
     }
@@ -143,17 +143,17 @@
     .info {
         &-content {
             h1 {
-                @include title_text(42px);
-                margin: 25px 0 0 100px;
+                @include title_text(2.6rem);
+                margin: 1.55rem 0 0 6.25rem;
             }
             p {
                 width: 60%;
-                @include paragraph_text(32px);
-                margin: 10px 0 0 100px;
+                @include paragraph_text(2rem);
+                margin: 0.6rem 0 0 6.25rem;
             }
         }
         &-button {
-            margin: 20px 0 0 100px;
+            margin: 1.25rem 0 0 6.25rem;
         }
     }
 }

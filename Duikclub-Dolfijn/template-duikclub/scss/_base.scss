@@ -27,22 +27,22 @@ body {
     overflow: hidden;
 }
 
-@mixin header_text($font-size: 48px) {
+@mixin header_text($font-size: 3rem) {
     font-size: $font-size;
     font-weight: 700;
 }
 
-@mixin title_text($font-size: 24px) {
+@mixin title_text($font-size: 1.5rem) {
     font-size: $font-size;
     font-weight: 500;
 }
 
-@mixin paragraph_text($font-size: 16px) {
+@mixin paragraph_text($font-size: 1rem) {
     font-size: $font-size;
     font-weight: 300;
 }
 
-@mixin footer_text($font-size: 16px) {
+@mixin footer_text($font-size: 1rem) {
     font-size: $font-size;
     font-weight: 300;
 }
