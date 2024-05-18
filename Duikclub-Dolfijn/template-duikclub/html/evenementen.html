@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duikclub Dolfijn | Contact</title>
+    <title>Duikclub Dolfijn | Evenementen</title>
+
+    <!-- Scripts -->
+    <script src="../../web/scripts/navigation_menu.js"></script>
+
+    <!-- Library's -->
+    <script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Duikclub-Dolfijn-CraftCMS/Duikclub-Dolfijn/web/css/main.css">
+    <link rel="stylesheet" href="../../web/css/main.css">
 
     <!-- Fonts -->
     <link href="/assets/fonts/StageGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -15,17 +21,108 @@
     <link href="/assets/fonts/StageGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link href="/assets/fonts/StageGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
-</head
+</head>
 <body>
     <div class="navigation">
         <div class="profile-picture"></div>
-        <div class="logo"></div>
-        <div class="menu-icon">
+        <a href="../index.html"><img src="../assets/images/logos/Dolfijn.png" alt="logo_dolfijn" class="logo"></a>
+        <div class="menu-icon" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
+
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="../html/duiken.html">Duiken</a></li>
+                <li><a href="#">Gallerij</a></li>
+                <li><a href="#">Evenementen</a></li>
+                <li><a href="#">Leden</a></li>
+                <li><a href="#">Over ons</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
+
+    <div class="duiken-banner">
+        <img src="../assets/images/evenementen/Esneux-1.jpg" alt="banner_home">
+        <div class="duiken-banner-content">
+            <h1>Evenementen</h1>
+        </div>
+    </div> 
+
+    <div class="section">
+        <div class="section-wrapper">
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+
+            <div class="section-card evenementen-card">
+                <h1>Pizza avond</h1>
+                <p>Bilzen</p>
+                <p>10 maart</p>
+    
+                <div class="section-card-bottom evenementen-card-bottom">
+                    <p>12:00 - 16:00</p>
+                    <a href="#"><button class="standard-button card-button">DETAILS</button></a>
+                </div>
+            </div>
+        
+            
+        </div>    
+    </div>
+
     <footer class="footer">
         <div class="footer-text">
             <h2>#kopjeonder</h2>
