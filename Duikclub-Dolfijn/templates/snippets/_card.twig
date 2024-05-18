@@ -1,9 +1,40 @@
-<div class="opkomendeDuiken-card">
-    <h1>{{card.title}}</h1>
-    <p>{{card.datum | date("d F", locale="nl-BE")}} | {{card.beginUur | date("H:i")}} - {{card.eindUur | date("H:i")}}</p>
-    <p>{{card.duikTitle}}</p>
-    <div class="opkomendeDuiken-card-bottom">
-        <p>Plaatsen: 4/20</p>
-        <button class="standard-button card-button"><a href="{{card.url}}">DETAILS</a></button>      
+{% if duiken is defined %}
+
+	<div class="section-card">
+		<h1>{{card.title}}</h1>
+
+		<p>{{card.datum | date("d F", locale="nl-BE")}}
+			|
+			{{card.beginUur | date("H:i")}}
+			-
+			{{card.eindUur | date("H:i")}}</p>
+		<p>{{card.duikTitle}}</p>
+
+
+		<div class="section-card-bottom">
+			<p>Plaatsen: 4/20</p>
+			<a href="{{card.url}}">
+				<button class="standard-button card-button">
+					DETAILS
+				</button>
+			</a>
+		</div>
+	</div>
+
+{% endif %}
+
+{% if brevetten is defined %}
+
+    <div class="section-card opleiding-card">
+        <div>
+            <h1>{{card.title}}</h1>
+            <p>{{card.brevetDescription}}</p>
+        </div>
+        <div class="section-card-bottom opleiding-card-bottom">
+            <a href="{{card.brevetDetails}}" target="_blank"><button class="standard-button card-button">DETAILS</button></a>
+        </div>
     </div>
-</div>
+
+{% endif %}
+
+

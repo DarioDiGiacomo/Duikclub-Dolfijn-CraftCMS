@@ -1,0 +1,80 @@
+color: null
+fieldLayouts:
+  84f5d924-e8bd-4bb1-aff2-0778543ee133:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ac0f25a1-2e27-4c18-ac0d-cadfbf9f3226
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 52a0697a-56b1-4445-891c-0cd70e4df0e8 # Brevet Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d20606ac-b279-4c41-9fed-fb3daf5950b7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7a8cea59-b761-47c7-bd4e-6c20b48a95f4 # Brevet Details
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4109c446-7a39-4df7-9061-5bddb9c63e3f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: efac9231-0c43-44d1-bca2-e063e8fb6850
+        userCondition: null
+handle: brevetten
+hasTitleField: true
+icon: medal
+name: brevetten
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
