@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - f281ce47-179e-4fed-ae32-f348a72e2505 # Gallerij
-handle: gallerij
+  - 8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b # Page
+handle: gallerijTitle
 maxAuthors: 1
-name: Gallerij
+name: 'Gallerij Title'
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
     enabledByDefault: true
     hasUrls: true
-    template: _gallerij/_entry.twig
-    uriFormat: 'gallerij/{slug}'
-type: channel
+    template: _gallerij\_gallerij.twig
+    uriFormat: gallerij
+type: single

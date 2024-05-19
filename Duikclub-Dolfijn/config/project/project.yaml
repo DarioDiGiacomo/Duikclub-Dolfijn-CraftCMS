@@ -1,4 +1,4 @@
-dateModified: 1716039365
+dateModified: 1716127106
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -15,6 +15,8 @@ meta:
   __names__:
     3f5bba28-6c17-495e-ba00-f8ba434e02b4: 'Public Schema' # Public Schema
     7a8cea59-b761-47c7-bd4e-6c20b48a95f4: 'Brevet Details' # Brevet Details
+    7f805254-7b80-475d-b90a-bf9948eb4e08: 'Gallerij Title' # Gallerij Title
+    8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: Page # Page
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
     08ecdef1-1d02-4135-b1ae-bcc230e36bbd: New # New
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home

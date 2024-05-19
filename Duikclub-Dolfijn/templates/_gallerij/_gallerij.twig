@@ -1,0 +1,95 @@
+{% extends 'index' %}
+
+{% set gallerijEntries = craft.entries.section('gallerij').all() %}
+{% set tags = craft.entries.section('tags').all() %}
+
+{% set tagParam = craft.app.request.getParam('tags') %}
+
+{% if tagParam %}
+	{% set gallerijEntries = craft.entries.section('gallerij').relatedTo({ targetElement: tagParam }).all() %}
+{% endif %}
+
+{% set pageTitle = 'Gallerij' %}
+
+{% set allPhotos = [] %}
+{% for entry in gallerijEntries %}
+	{% set photos = entry.images.all() %}
+	{% if photos|length %}
+		{% set allPhotos = allPhotos|merge(photos) %}
+	{% endif %}
+{% endfor %}
+
+{% set photosPerPage = 8 %}
+{% set currentPage = craft.app.request.getParam('page') ?? 1 %}
+{% set totalPages = (allPhotos|length / photosPerPage)|round(0, 'ceil') %}
+{% set offset = (currentPage - 1) * photosPerPage %}
+
+{% set paginatedPhotos = allPhotos|slice(offset, photosPerPage) %}
+
+{% block content %}
+
+	<div class="section">
+		<h1 class="section-title">{{ pageTitle }}</h1>
+		<form method="get" action="" id="filter-form">
+			<select class="section-filter" name="tags" id="tag-filter">
+				<option value="">Alle foto's</option>
+				{% for tag in tags %}
+					<option value="{{ tag.id }}" {% if tagParam == tag.id %} selected {% endif %}>{{ tag.title }}</option>
+				{% endfor %}
+			</select>
+		</form>
+		<div class="section-gallerywrapper">
+			{% for photo in paginatedPhotos %}
+				<div class="section-gallerywrapper-item">
+					<img src="{{ photo.url }}" alt="{{ photo.title }}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% if totalPages != 1 %}
+	<div class="section-pages">
+		{% if currentPage > 1 %}
+			<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}&tags={{ tagParam }}">
+				<i class="fa-solid fa-chevron-left"></i>
+			</a>
+		{% else %}
+			<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}&tags={{ tagParam }}">
+				<i class="fa-solid fa-chevron-left"></i>
+			</a>
+		{% endif %}
+
+		{% set startPage = (currentPage > 1) ? currentPage - 1 : 1 %}
+		{% set endPage = (startPage + 2 > totalPages) ? totalPages : startPage + 2 %}
+		{% if endPage - startPage < 2 %}
+			{% set startPage = (endPage - 2 > 1) ? endPage - 2 : 1 %}
+		{% endif %}
+
+			{% for page in startPage..endPage %}
+				{% if page == currentPage %}
+					<a class="standard-button active-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}">{{ page }}</a>
+				{% else %}
+					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}">{{ page }}</a>
+				{% endif %}
+			{% endfor %}
+
+			{% set nextPage = currentPage + 1 %}
+			{% if nextPage > totalPages %}
+				<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1&tags={{ tagParam }}">
+					<i class="fa-solid fa-chevron-right"></i>
+				</a>
+			{% else %}
+				<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}&tags={{ tagParam }}">
+					<i class="fa-solid fa-chevron-right"></i>
+				</a>
+			{% endif %}
+		</div>
+	{% endif %}
+
+	<script>
+		document.getElementById('tag-filter').addEventListener('change', function () {
+document.getElementById('filter-form').submit();
+});
+	</script>
+
+{% endblock %}
