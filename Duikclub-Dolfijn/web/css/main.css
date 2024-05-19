@@ -113,6 +113,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fff;
   min-width: 22.5rem;
 }
@@ -281,6 +282,15 @@ body {
 
 .standard-button:hover {
   background-color: #2e96cb;
+}
+
+.standard-button:active {
+  background-color: #0f6b98;
+}
+
+.detail-button {
+  width: 100%;
+  margin: 2.5rem 0 0 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
@@ -673,15 +683,103 @@ body {
     color: #fff;
   }
 }
+.evenement-detail-content {
+  margin: 1.25rem 1.9rem 0 1.9rem;
+}
 .evenement-detail-content h1 {
   font-size: 2rem;
   font-weight: 500;
   font-weight: 700;
   color: #0D7EE5;
-  margin-top: 1.25rem;
 }
 .evenement-detail-content h2, .evenement-detail-content p {
   color: #fff;
+}
+.evenement-detail-content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1.25rem 0 0 0;
+}
+.evenement-detail-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0.5rem 0 0 0;
+}
+
+.section h1 {
+  color: #fff;
+}
+.section-gallerywrapper {
+  place-content: center;
+  place-items: center;
+  display: grid;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+.section-gallerywrapper-item {
+  transition: 0.2s ease-in-out;
+  width: 80%;
+}
+.section-gallerywrapper-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+.section-gallerywrapper-item:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+.section-pages {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.section-pages a {
+  font-weight: 700;
+  padding: 1.25rem 1.15rem;
+  background-color: #0D7EE5;
+  border-radius: 3px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+  .section-gallerywrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .section h1 {
+    color: #fff;
+  }
+  .section-gallerywrapper {
+    margin: 1.25rem 0;
+    place-content: center;
+    place-items: center;
+    display: grid;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section-gallerywrapper-item {
+    border: 1px solid green;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+  }
+  .section-gallerywrapper-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+  }
+  .section-gallerywrapper-item:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+  }
 }
 
 .section h1 {

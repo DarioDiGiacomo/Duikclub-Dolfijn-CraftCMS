@@ -114,6 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: $color-white;
     min-width: 22.5rem;
 
@@ -307,6 +308,15 @@
 
 .standard-button:hover {
     background-color: #2e96cb;
+}
+
+.standard-button:active {
+    background-color: #0f6b98;
+}
+
+.detail-button {
+    width: 100%;
+    margin: 2.5rem 0 0 0;
 }
 
 
