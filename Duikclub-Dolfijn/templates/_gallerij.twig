@@ -33,17 +33,17 @@
     <div class="section-pages">
 
         {% if currentPage > 1 %}
-            <a href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}">Previous page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}">Previous page</a>
         {% else %}
-            <a href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}">Previous page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}">Previous page</a>
         {% endif %}
 
         {% set totalPages = (allPhotos|length / photosPerPage)|round(0, 'ceil') %}
         {% set nextPage = currentPage + 1 %}
         {% if nextPage > totalPages %}
-            <a href="{{ craft.app.request.pathInfo }}?page=1">Next Page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1">Next Page</a>
         {% else %}
-            <a href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}">Next Page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}">Next Page</a>
         {% endif %}
     </div>
 {% endblock %}

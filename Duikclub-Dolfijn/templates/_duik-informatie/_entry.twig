@@ -1,0 +1,32 @@
+{% extends "index" %}
+
+{% set image = home.image.one()  %}
+{% set duikInformatie = craft.entries.section('duikinformatie').all() %}
+
+
+{% block content %}
+	<div class="duiken-wrapper" id="content1">
+		<div class="duiken-banner">
+			<img src="{{ image.url }}" alt="{{ image.title }}">
+			<div class="duiken-banner-content">
+				<h1>{{ entry.title }}</h1>
+				<p>Ben je benieuwd naar de verschillende opleidingen binnen duiken en welke brevetten er te behalen zijn?</p>
+
+				<div class="bottom-text">
+					{% for link in duikInformatieNav.navlinks.all() %}
+						{% set destination = link.linkDestination.one() %}
+						<a href="{{ destination.url }}" class="rotate-link" data-content="content{{ loop.index }}">{{ link.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		{% for link in duikInformatieNav.navlinks.all() %}
+			{% set destination = link.linkDestination.one() %}
+			{% if entry.title == link.title %}
+                {% include "snippets/_" ~ entry.title ~ ".twig" %}
+			{% endif %}
+		{% endfor %}
+	</div>
+
+{% endblock %}

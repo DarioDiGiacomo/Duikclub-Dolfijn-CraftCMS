@@ -24,21 +24,21 @@
 		<div class="info-content">
 			<h1>Niets is minder waar!</h1>
 			<p>Wil je leren duiken of gewoon gezellig duiken in een
-				                aangename clubsfeer, dan zit je hier goed bij Duikclub Dolfijn.
+												                aangename clubsfeer, dan zit je hier goed bij Duikclub Dolfijn.
 			</p>
 			<button class="standard-button info-button" role="button">
 				<a href="#">Over Ons</a>
 			</button>
 		</div>
 	</div>
-  
-	<div class="opkomendeDuiken">
-        <h1 class="opkomendeDuiken-title">Opkomende Duiken</h1>
-        <div class="opkomendeDuiken-wrapper">
-            {% for duiken in craft.entries.section('duiken').all() %}
-                {% include "snippets/_card.twig" with { 'duiken': duiken } %}
-            {% endfor %}
-        </div>
+
+	<div class="section">
+		<h1 class="section-title">Opkomende Duiken</h1>
+		<div class="section-wrapper">
+			{% for duiken in craft.entries.section('duiken').datum('>= ' ~ "now"|date("Y-m-d")).limit(8).orderBy('datum').all() %}
+				{% include "snippets/_card.twig" with { card: duiken, duiken: true } %}
+			{% endfor %}
+		</div>
 	</div>
 
 

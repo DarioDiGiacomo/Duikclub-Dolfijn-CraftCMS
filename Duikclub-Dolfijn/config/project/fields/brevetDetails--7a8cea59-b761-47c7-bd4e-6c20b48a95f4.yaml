@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: brevetDetails
+instructions: null
+name: 'Brevet Details'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

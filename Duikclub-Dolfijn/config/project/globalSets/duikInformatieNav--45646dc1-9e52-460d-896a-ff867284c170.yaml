@@ -1,0 +1,27 @@
+fieldLayouts:
+  8f5050f4-4870-43ed-bcdb-34319370f2f4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a6b37a3b-7ccd-4cbb-ad27-24c18f19fc0c # NavLinks
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d539d9d-838d-4d68-bf98-3c536eab10f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3ed468e9-4fda-4e3b-b8d9-0f18d3194031
+        userCondition: null
+handle: duikInformatieNav
+name: 'Duik Informatie Nav'
+sortOrder: 1
