@@ -1,0 +1,98 @@
+@use 'base' as *;
+
+.section {
+    h1 {
+        color: $color-white;
+    }
+
+    &-gallerywrapper {
+        // margin: 20px 0;
+        place-content: center;
+        place-items: center;
+        display: grid;
+        gap: 40px; // Ruimte tussen de grid items
+        padding: 40px; // Ruimte binnen de container
+        grid-template-columns: repeat(1, 1fr);
+
+        &-item {
+            transition: .2s ease-in-out;
+            width: 80%;
+
+            img {
+                width: 100%;
+                height:  auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+                display: block;
+            }
+
+            &:hover {
+                transition: .2s ease-in-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &-pages {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        a {
+            font-weight: 700;
+            padding: 20px 10px;
+            background-color: $color-primary;
+            border-radius: 3px;
+            color: $color-white;
+        }
+    }
+}
+
+// Responsieve breakpoints
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .section {
+        &-gallerywrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+
+    .section {
+        h1 {
+            color: $color-white;
+        }
+    
+        &-gallerywrapper {
+            margin: 20px 0;
+            place-content: center;
+            place-items: center;
+            display: grid;
+            gap: 40px; // Ruimte tussen de grid items
+            padding: 40px; // Ruimte binnen de container
+            grid-template-columns: repeat(4, 1fr);
+    
+            &-item {
+                border: 1px solid green;
+                transition: .2s ease-in-out;
+                width: 100%;
+    
+                img {
+                    width: 100%;
+                    height:  auto;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    display: block;
+                }
+    
+                &:hover {
+                    transition: .2s ease-in-out;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+}

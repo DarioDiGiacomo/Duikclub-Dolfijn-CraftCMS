@@ -1,4 +1,4 @@
-dateModified: 1716036600
+dateModified: 1716039365
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -27,6 +27,7 @@ meta:
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
     45646dc1-9e52-460d-896a-ff867284c170: 'Duik Informatie Nav' # Duik Informatie Nav
+    2830182f-de41-4285-b864-d835efdccff4: Tags # Tags
     a1f5ff61-2261-4570-be4f-b52acd6857cb: Images # Images
     a6b37a3b-7ccd-4cbb-ad27-24c18f19fc0c: NavLinks # NavLinks
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
@@ -34,6 +35,7 @@ meta:
     b5110f84-3345-43fe-9de9-d8d78725d14f: Brevetten # Brevetten
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
+    c751aa6a-595b-43e9-b450-fd22d6660bf6: Tags # Tags
     d13a7851-9c43-4c29-a7ea-8beb53fa9eb4: 'Duik Informatie' # Duik Informatie
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
     db3a5384-72e7-41bd-9a3e-73c0c097b964: 'Begin Uur' # Begin Uur
@@ -42,6 +44,7 @@ meta:
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
     f281ce47-179e-4fed-ae32-f348a72e2505: Gallerij # Gallerij
     f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
+    f9416568-3aa1-4e2e-b9b3-38dc72accc88: Tags # Tags
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
 plugins:
   formie:
