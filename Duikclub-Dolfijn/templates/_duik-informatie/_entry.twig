@@ -1,5 +1,8 @@
 {% extends "index" %}
 
+{% set pageTitle = entry.title %}
+
+
 {% set image = home.image.one()  %}
 {% set duikInformatie = craft.entries.section('duikinformatie').all() %}
 

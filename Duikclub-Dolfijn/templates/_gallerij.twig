@@ -2,6 +2,8 @@
 
 {% set gallerijEntries = craft.entries.section('gallerij').all() %}
 
+{% set pageTitle = 'Gallerij' %}
+
 {% set allPhotos = [] %}
 {% for entry in gallerijEntries %}
     {% set photos = entry.images.all() %}
@@ -31,19 +33,32 @@
     </div>
 
     <div class="section-pages">
-
         {% if currentPage > 1 %}
-            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}">Previous page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}"><i class="fa-solid fa-chevron-left"></i></a>
         {% else %}
-            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}">Previous page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}"><i class="fa-solid fa-chevron-left"></i></a>
         {% endif %}
 
-        {% set totalPages = (allPhotos|length / photosPerPage)|round(0, 'ceil') %}
+        {% set startPage = (currentPage > 1) ? currentPage - 1 : 1 %}
+        {% set endPage = (startPage + 2 > totalPages) ? totalPages : startPage + 2 %}
+        {% if endPage - startPage < 2 %}
+            {% set startPage = (endPage - 2 > 1) ? endPage - 2 : 1 %}
+        {% endif %}
+
+        {% for page in startPage..endPage %}
+            {% if page == currentPage %}
+                <a class="standard-button" style="background-color: #012336;" href="{{ craft.app.request.pathInfo }}?page={{ page }}">{{ page }}</a>
+            {% else %}
+                <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
         {% set nextPage = currentPage + 1 %}
         {% if nextPage > totalPages %}
-            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1">Next Page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1"><i class="fa-solid fa-chevron-right"></i></a>
         {% else %}
-            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}">Next Page</a>
+            <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}"><i class="fa-solid fa-chevron-right"></i></a>
         {% endif %}
     </div>
+
 {% endblock %}
