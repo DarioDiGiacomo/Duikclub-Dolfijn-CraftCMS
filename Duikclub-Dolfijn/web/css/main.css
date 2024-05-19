@@ -597,12 +597,13 @@ body {
   width: 100%;
   object-fit: cover;
   max-height: 90svh;
-  filter: brightness(70%);
+  filter: brightness(50%);
 }
 .duiken-banner-content {
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 80%;
   gap: 0.6rem;
@@ -623,10 +624,15 @@ body {
   margin-top: 2.5rem;
 }
 .duiken-banner-content .bottom-text a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 300;
   font-weight: 400;
   color: #fff;
+}
+.duiken-banner-content .bottom-text .active-link {
+  color: #0D7EE5;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .opleiding-card {
@@ -683,6 +689,17 @@ body {
     color: #fff;
   }
 }
+.calendar-wrapper {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.selected-date {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 .evenement-detail-content {
   margin: 1.25rem 1.9rem 0 1.9rem;
 }
