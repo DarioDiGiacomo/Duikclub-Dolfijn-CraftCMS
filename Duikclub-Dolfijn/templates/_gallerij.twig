@@ -47,7 +47,7 @@
 
         {% for page in startPage..endPage %}
             {% if page == currentPage %}
-                <a class="standard-button" style="background-color: #012336;" href="{{ craft.app.request.pathInfo }}?page={{ page }}">{{ page }}</a>
+                <a class="standard-button active-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}">{{ page }}</a>
             {% else %}
                 <a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}">{{ page }}</a>
             {% endif %}
