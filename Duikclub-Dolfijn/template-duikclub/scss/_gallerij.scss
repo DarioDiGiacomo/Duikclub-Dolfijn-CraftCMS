@@ -6,12 +6,12 @@
     }
 
     &-gallerywrapper {
-        // margin: 20px 0;
+        // margin: 0 40px;
         place-content: center;
         place-items: center;
         display: grid;
-        gap: 40px; // Ruimte tussen de grid items
-        padding: 40px; // Ruimte binnen de container
+        gap: 40px; // Ruimte tussen de grid itemss
+        padding: 40px 0; // Ruimte binnen de container
         grid-template-columns: repeat(1, 1fr);
 
         &-item {
@@ -20,7 +20,7 @@
 
             img {
                 width: 100%;
-                height:  auto;
+                height: auto;
                 aspect-ratio: 1;
                 object-fit: cover;
                 display: block;
@@ -38,21 +38,28 @@
         display: flex;
         justify-content: center;
         gap: 40px;
-
-        a {
-            font-weight: 700;
-            padding: 20px 10px;
-            background-color: $color-primary;
-            border-radius: 3px;
-            color: $color-white;
-        }
     }
 }
+
 // Responsieve breakpoints
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .section {
         &-gallerywrapper {
             grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto;
+            width: 90%;
+
+
+            &-item {
+            width: 100%;
+
+                img {
+                    width: 100%;
+                    // height: auto;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -70,17 +77,16 @@
             place-items: center;
             display: grid;
             gap: 40px; // Ruimte tussen de grid items
-            padding: 40px; // Ruimte binnen de container
+            padding: 40px 80px; // Ruimte binnen de container
             grid-template-columns: repeat(4, 1fr);
 
             &-item {
-                border: 1px solid green;
                 transition: .2s ease-in-out;
                 width: 100%;
 
                 img {
                     width: 100%;
-                    height:  auto;
+                    height: auto;
                     aspect-ratio: 1;
                     object-fit: cover;
                     display: block;
