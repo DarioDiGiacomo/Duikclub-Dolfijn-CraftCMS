@@ -36,12 +36,10 @@
 
 			<div id="menu-overlay">
 				<ul>
-					<li><a href="#">Duiken</a></li>
-					<li><a href="#">Gallerij</a></li>
-					<li><a href="#">Evenementen</a></li>
-					<li><a href="#">Leden</a></li>
-					<li><a href="#">Over ons</a></li>
-					<li><a href="#">Contact</a></li>
+				{% for link in header.navlinks.all() %}
+					{% set destination = link.linkDestination.one() %}
+					<li><a href="{{ destination.url }}">{{ link.title }}</a></li>
+				{% endfor %}
 				</ul>
 			</div>
 		</div>

@@ -1,0 +1,26 @@
+{% extends 'index' %}
+
+{% set image = home.image.one()  %}
+
+{% set pageTitle = entry.herotitle %}
+
+{% block content %}
+
+<div class="centered-banner">
+        <img src="{{image.url}}" alt="banner_home">
+        <div class="centered-banner-content">
+            <h1>{{pageTitle}}</h1>
+        </div>
+    </div> 
+
+    <div class="section">
+        <div class="section-wrapper">
+            
+        {% for evenement in craft.entries.section('evenementen').all() %}
+			{% include "snippets/_card.twig" with { card: evenement, evenement: true } %}
+		{% endfor %}
+            
+        </div>    
+    </div>
+
+{% endblock %}

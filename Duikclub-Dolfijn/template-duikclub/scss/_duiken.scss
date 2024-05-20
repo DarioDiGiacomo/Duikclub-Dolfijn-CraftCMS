@@ -42,12 +42,17 @@
             display: flex;
             gap: 0.9rem;
             margin-top: 2.50rem;
+
+            .activeLink {
+                color: $color-black;
+            }
         
             a {
                 @include paragraph_text(0.9rem);
                 font-weight: 400;
                 color: $color-white;
             }
+
         }
     }
 }

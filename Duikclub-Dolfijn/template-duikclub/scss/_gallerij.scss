@@ -5,14 +5,67 @@
         color: $color-white;
     }
 
+    &-filter {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: $color-white;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10000;
+
+        &-close-button {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            color: $color-white;
+            font-size: 3rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+
+
+        &-tags {
+            background-color: $color-white;
+            border: 1px solid rgba(58, 74, 90, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+            box-sizing: border-box;
+            color: $color-accent;
+            cursor: pointer;
+            display: flex;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.25rem;
+            padding: 0.6rem 1.15rem;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            white-space: nowrap;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
     &-gallerywrapper {
-        // margin: 0 40px;
         place-content: center;
         place-items: center;
         display: grid;
-        gap: 2.5rem; // Ruimte tussen de grid items
-        padding: 2.5rem; // Ruimte binnen de container
-
+        gap: 2.5rem;
+        padding: 2.5rem;
         grid-template-columns: repeat(1, 1fr);
 
         &-item {
@@ -34,29 +87,47 @@
         }
     }
 
+    &-error {
+        color: $color-white;
+        text-align: center;
+    }
+
     &-pages {
         width: 100%;
         display: flex;
         justify-content: center;
         gap: 1.25rem;
     }
+
+    &-filter-button {
+        margin: 1rem 4rem;
+    }
+
+    &-filter-active {
+        transform: translateX(0);
+    }
 }
 
 // Responsieve breakpoints
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .section {
+
+        &-filter {
+            width: 100%;
+            margin: 1rem 4rem;
+            overflow-x: inherit;
+        }
+
         &-gallerywrapper {
             grid-template-columns: repeat(2, 1fr);
             margin: 0 auto;
             width: 90%;
 
-
             &-item {
-            width: 100%;
+                width: 100%;
 
                 img {
                     width: 100%;
-                    // height: auto;
                     object-fit: cover;
                     display: block;
                 }
@@ -66,10 +137,11 @@
 }
 
 @media only screen and (min-width: 1366px) {
-
     .section {
-        h1 {
-            color: $color-white;
+
+        &-filter {
+            overflow-x: inherit;
+            width: 25%;
         }
 
         &-gallerywrapper {
@@ -77,9 +149,8 @@
             place-content: center;
             place-items: center;
             display: grid;
-
-            gap: 2.5rem; // Ruimte tussen de grid items
-            padding: 2.5rem; // Ruimte binnen de container
+            gap: 2.5rem;
+            padding: 2.5rem;
             grid-template-columns: repeat(4, 1fr);
 
             &-item {
@@ -101,5 +172,4 @@
             }
         }
     }
-
 }
