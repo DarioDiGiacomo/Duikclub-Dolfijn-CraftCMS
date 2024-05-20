@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     rotateLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
+
             const contentId = this.getAttribute('data-content');
             bannerWrapper.forEach(content => {
                 content.classList.add('hidden');

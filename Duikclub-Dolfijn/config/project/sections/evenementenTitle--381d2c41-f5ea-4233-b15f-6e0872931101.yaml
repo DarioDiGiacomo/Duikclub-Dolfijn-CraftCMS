@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b # Page
+handle: evenementenTitle
+maxAuthors: 1
+name: 'Evenementen Title'
+propagationMethod: all
+siteSettings:
+  82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
+    enabledByDefault: true
+    hasUrls: true
+    template: _evenementen\index.twig
+    uriFormat: evenementen
+type: single

@@ -22,7 +22,7 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:c1d29cef-84a3-4a6c-aa79-b927fc624241' # Images
   restrictedLocationSubpath: null
-  selectionLabel: 'Voeg alle federaties toe'
+  selectionLabel: 'Voeg hier uw foto''s'
   showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false

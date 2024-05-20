@@ -6,11 +6,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Duikclub Dolfijn</title>
+		<title>Duikclub Dolfijn | {{ pageTitle }}</title>
+
+		<!-- Scripts -->
+		<script src="{{siteUrl}}scripts/navigation_menu.js"></script>
 
 		<!-- CSS -->
-		<link
-		rel="stylesheet" href="{{siteUrl}}css/main.css">
+		<link rel="stylesheet" href="{{siteUrl}}css/main.css">
+
+		<!-- Library's -->
+    	<script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
 
 		<!-- Fonts -->
 		<link href="/assets/fonts/StageGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,11 +27,20 @@
 	<body>
 		<div class="navigation">
 			<div class="profile-picture" style="background-image: url('{{image.url}}');"></div>
-			<div class="logo" style="background-image: url('{{logo.url}}');"></div>
-			<div class="menu-icon">
+			<a href="{{siteUrl}}"><img src="{{ logo.url }}" alt="{{ logo.title }}" class="logo"></a>
+			<div class="menu-icon" onclick="toggleMenu()">
 				<div class="line"></div>
 				<div class="line"></div>
 				<div class="line"></div>
+			</div>
+
+			<div id="menu-overlay">
+				<ul>
+				{% for link in header.navlinks.all() %}
+					{% set destination = link.linkDestination.one() %}
+					<li><a href="{{ destination.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+				</ul>
 			</div>
 		</div>
 		{% block content %}{% endblock %}

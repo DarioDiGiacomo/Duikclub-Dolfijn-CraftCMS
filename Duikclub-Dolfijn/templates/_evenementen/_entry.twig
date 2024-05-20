@@ -1,0 +1,35 @@
+{% extends 'index' %}
+
+{% set pageTitle = entry.title %}
+
+{% set eventimage = entry.image.one() %}
+
+{% block content %}
+	<div class="centered-banner">
+		<img src="{{ eventimage.url }}" alt="banner">
+		<div class="centered-banner-content">
+			<h1>{{ entry.title| upper }}</h1>
+		</div>
+	</div>
+
+	<div class="evenement-detail">
+		<div class="evenement-detail-content">
+			<h1>{{entry.title}}</h1>
+			<p>{{entry.eventDescription}}</p>
+			<h2>{{entry.datum | date("l d F Y", locale="nl-BE")}}</h2>
+			<p>{{entry.beginUur | date("H:i")}}
+				-
+				{{entry.eindUur | date("H:i")}}</p>
+
+			{% if entry.eventPrice %}
+
+				<h2>Prijs</h2>
+				<p>{{entry.eventPrice| money}}</p>
+
+			{% endif %}
+			<a href="#">
+				<button class="standard-button detail-button">INSCHRIJVEN</button>
+			</a>
+		</div>
+	</div>
+{% endblock %}
