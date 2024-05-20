@@ -17,13 +17,14 @@
         width: 100%;
         object-fit: cover;
         max-height: 90svh;
-        filter: brightness(70%);
+        filter: brightness(50%);
     }
 
     &-content {
         position: absolute;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         width: 80%;
@@ -48,11 +49,16 @@
             }
         
             a {
-                @include paragraph_text(0.9rem);
+                @include paragraph_text(1rem);
                 font-weight: 400;
                 color: $color-white;
             }
 
+            .active-link {
+                color: $color-primary;
+                text-decoration: underline;
+                font-weight: 700;
+            }
         }
     }
 }
