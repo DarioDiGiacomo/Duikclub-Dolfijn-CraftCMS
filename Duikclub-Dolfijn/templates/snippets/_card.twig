@@ -23,18 +23,37 @@
 
 {% endif %}
 
-{% if brevetten is defined %}
 
-    <div class="section-card opleiding-card">
-        <div>
-            <h1>{{card.title}}</h1>
-            <p>{{card.brevetDescription}}</p>
-        </div>
-        <div class="section-card-bottom opleiding-card-bottom">
-            <a href="{{card.brevetDetails}}" target="_blank"><button class="standard-button card-button">DETAILS</button></a>
-        </div>
-    </div>
+{% if evenement is defined %}
+
+	<div class="section-card evenementen-card">
+		<h1>{{card.title}}</h1>
+		<p>{{card.eventLocation.one()}}</p>
+		<p>{{card.datum | date("d F", locale="nl-BE")}}
+
+		<div class="section-card-bottom evenementen-card-bottom">
+			<p>{{card.beginUur | date("H:i")}} - {{card.eindUur | date("H:i")}}</p>
+			<a href="{{card.url}}">
+				<button class="standard-button card-button">DETAILS</button>
+			</a>
+		</div>
+	</div>
 
 {% endif %}
 
 
+{% if brevetten is defined %}
+
+	<div class="section-card opleiding-card">
+		<div>
+			<h1>{{card.title}}</h1>
+			<p>{{card.brevetDescription}}</p>
+		</div>
+		<div class="section-card-bottom opleiding-card-bottom">
+			<a href="{{card.brevetDetails}}" target="_blank">
+				<button class="standard-button card-button">DETAILS</button>
+			</a>
+		</div>
+	</div>
+
+{% endif %}

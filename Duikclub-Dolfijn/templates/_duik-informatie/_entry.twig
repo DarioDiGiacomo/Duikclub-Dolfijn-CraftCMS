@@ -18,7 +18,9 @@
 				<div class="bottom-text">
 					{% for link in duikInformatieNav.navlinks.all() %}
 						{% set destination = link.linkDestination.one() %}
-						<a href="{{ destination.url }}" class="rotate-link" data-content="content{{ loop.index }}">{{ link.title }}</a>
+						{% set isActive = entry.title == link.title %}
+						
+						<a href="{{ destination.url }}" class="rotate-link {% if isActive %}activeLink{% endif %}" data-content="content{{ loop.index }}">{{ link.title }}</a>
 					{% endfor %}
 				</div>
 			</div>

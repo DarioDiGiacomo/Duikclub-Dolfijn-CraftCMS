@@ -623,6 +623,9 @@ body {
   gap: 0.9rem;
   margin-top: 2.5rem;
 }
+.duiken-banner-content .bottom-text .activeLink {
+  color: #222222;
+}
 .duiken-banner-content .bottom-text a {
   font-size: 1rem;
   font-weight: 300;
@@ -726,6 +729,55 @@ body {
 .section h1 {
   color: #fff;
 }
+.section-filter {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10000;
+}
+.section-filter-close-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.section-filter-tags {
+  background-color: #fff;
+  border: 1px solid rgba(58, 74, 90, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #012336;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  padding: 0.6rem 1.15rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.section .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
 .section-gallerywrapper {
   place-content: center;
   place-items: center;
@@ -749,14 +801,29 @@ body {
   transition: 0.2s ease-in-out;
   transform: scale(1.1);
 }
+.section-error {
+  color: #fff;
+  text-align: center;
+}
 .section-pages {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1.25rem;
 }
+.section-filter-button {
+  margin: 1rem 4rem;
+}
+.section-filter-active {
+  transform: translateX(0);
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
+  .section-filter {
+    width: 100%;
+    margin: 1rem 4rem;
+    overflow-x: inherit;
+  }
   .section-gallerywrapper {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
@@ -772,8 +839,9 @@ body {
   }
 }
 @media only screen and (min-width: 1366px) {
-  .section h1 {
-    color: #fff;
+  .section-filter {
+    overflow-x: inherit;
+    width: 25%;
   }
   .section-gallerywrapper {
     margin: 1.25rem 0;

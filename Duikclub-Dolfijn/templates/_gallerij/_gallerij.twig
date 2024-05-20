@@ -4,6 +4,7 @@
 {% set tags = craft.entries.section('tags').all() %}
 
 {% set tagParam = craft.app.request.getParam('tags') %}
+{% set orderParam = craft.app.request.getParam('order') %}
 
 {% if tagParam %}
 	{% set gallerijEntries = craft.entries.section('gallerij').relatedTo({ targetElement: tagParam }).all() %}
@@ -24,20 +25,37 @@
 {% set totalPages = (allPhotos|length / photosPerPage)|round(0, 'ceil') %}
 {% set offset = (currentPage - 1) * photosPerPage %}
 
+{% if orderParam == 'desc' %}
+	{% set allPhotos = allPhotos|reverse %}
+{% endif %}
+
 {% set paginatedPhotos = allPhotos|slice(offset, photosPerPage) %}
 
 {% block content %}
 
 	<div class="section">
 		<h1 class="section-title">{{ pageTitle }}</h1>
-		<form method="get" action="" id="filter-form">
-			<select class="section-filter" name="tags" id="tag-filter">
-				<option value="">Alle foto's</option>
-				{% for tag in tags %}
-					<option value="{{ tag.id }}" {% if tagParam == tag.id %} selected {% endif %}>{{ tag.title }}</option>
-				{% endfor %}
-			</select>
-		</form>
+
+		<button class="section-filter-button standard-button" id="toggle-filter">Filters</button>
+
+		<div class="section-filter" id="filter-menu">
+			<button class="section-filter-close-button" id="close-filter">&times;</button>
+			<h1>Filters</h1>
+			<form method="get" action="" class="form" id="filter-form">
+				<select name="tags" id="tag-filter" class="section-filter-tags">
+					<option value="">Alle foto's</option>
+					{% for tag in tags %}
+						<option value="{{ tag.id }}" {% if tagParam == tag.id %} selected {% endif %}>{{ tag.title }}</option>
+					{% endfor %}
+				</select>
+				<select name="order" id="order-filter" class="section-filter-tags">
+					<option value="asc" {% if orderParam == 'asc' %} selected {% endif %}>Nieuw naar oud</option>
+					<option value="desc" {% if orderParam == 'desc' %} selected {% endif %}>Oud naar nieuw</option>
+				</select>
+				<button type="button" class="standard-button" id="reset-button">Reset filters</button>
+			</form>
+		</div>
+
 		<div class="section-gallerywrapper">
 			{% for photo in paginatedPhotos %}
 				<div class="section-gallerywrapper-item">
@@ -47,48 +65,74 @@
 		</div>
 	</div>
 
-{% if totalPages != 1 %}
-	<div class="section-pages">
-		{% if currentPage > 1 %}
-			<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}&tags={{ tagParam }}">
-				<i class="fa-solid fa-chevron-left"></i>
-			</a>
-		{% else %}
-			<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}&tags={{ tagParam }}">
-				<i class="fa-solid fa-chevron-left"></i>
-			</a>
-		{% endif %}
-
-		{% set startPage = (currentPage > 1) ? currentPage - 1 : 1 %}
-		{% set endPage = (startPage + 2 > totalPages) ? totalPages : startPage + 2 %}
-		{% if endPage - startPage < 2 %}
-			{% set startPage = (endPage - 2 > 1) ? endPage - 2 : 1 %}
-		{% endif %}
-
-			{% for page in startPage..endPage %}
-				{% if page == currentPage %}
-					<a class="standard-button active-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}">{{ page }}</a>
+	{% if allPhotos %}
+		{% if totalPages != 1 %}
+			<div class="section-pages">
+				{% if currentPage > 1 %}
+					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}&tags={{ tagParam }}&order={{ orderParam }}">
+						<i class="fa-solid fa-chevron-left"></i>
+					</a>
 				{% else %}
-					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}">{{ page }}</a>
+					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ totalPages }}&tags={{ tagParam }}&order={{ orderParam }}">
+						<i class="fa-solid fa-chevron-left"></i>
+					</a>
 				{% endif %}
-			{% endfor %}
 
-			{% set nextPage = currentPage + 1 %}
-			{% if nextPage > totalPages %}
-				<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1&tags={{ tagParam }}">
-					<i class="fa-solid fa-chevron-right"></i>
-				</a>
-			{% else %}
-				<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}&tags={{ tagParam }}">
-					<i class="fa-solid fa-chevron-right"></i>
-				</a>
-			{% endif %}
+				{% set startPage = (currentPage > 1) ? currentPage - 1 : 1 %}
+				{% set endPage = (startPage + 2 > totalPages) ? totalPages : startPage + 2 %}
+				{% if endPage - startPage < 2 %}
+					{% set startPage = (endPage - 2 > 1) ? endPage - 2 : 1 %}
+				{% endif %}
+
+				{% for page in startPage..endPage %}
+					{% if page == currentPage %}
+						<a class="standard-button active-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}&order={{ orderParam }}">{{ page }}</a>
+					{% else %}
+						<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ page }}&tags={{ tagParam }}&order={{ orderParam }}">{{ page }}</a>
+					{% endif %}
+				{% endfor %}
+
+				{% set nextPage = currentPage + 1 %}
+				{% if nextPage > totalPages %}
+					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page=1&tags={{ tagParam }}&order={{ orderParam }}">
+						<i class="fa-solid fa-chevron-right"></i>
+					</a>
+				{% else %}
+					<a class="standard-button" href="{{ craft.app.request.pathInfo }}?page={{ nextPage }}&tags={{ tagParam }}&order={{ orderParam }}">
+						<i class="fa-solid fa-chevron-right"></i>
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+	{% else %}
+		<div class="section-error">
+			<h1 class="section-error-text">Er zijn geen afbeeldingen gevonden voor de gekozen filter, probeer een ander!</h1>
 		</div>
 	{% endif %}
 
 	<script>
-		document.getElementById('tag-filter').addEventListener('change', function () {
+		document.getElementById('toggle-filter').addEventListener('click', function () {
+document.getElementById('filter-menu').classList.toggle('section-filter-active');
+document.body.classList.toggle('no-scroll');
+
+});
+
+document.getElementById('close-filter').addEventListener('click', function () {
+document.getElementById('filter-menu').classList.remove('section-filter-active');
+document.body.classList.remove('no-scroll');
+
+});
+
+document.getElementById('tag-filter').addEventListener('change', function () {
 document.getElementById('filter-form').submit();
+});
+
+document.getElementById('order-filter').addEventListener('change', function () {
+document.getElementById('filter-form').submit();
+});
+
+document.getElementById('reset-button').addEventListener('click', function () {
+window.location.href = window.location.pathname;
 });
 	</script>
 
