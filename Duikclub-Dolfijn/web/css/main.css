@@ -683,15 +683,63 @@ body {
     color: #fff;
   }
 }
-.calendar-wrapper {
+.container-agenda {
   width: 300px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
-.selected-date {
-  margin-top: 20px;
+.numInputWrapper {
+  margin-left: 1.5rem;
+}
+
+.flatpickr-day, .numInput, .today, .flatpickr-weekday {
+  color: #fff !important;
+}
+
+.flatpickr-prev-month svg path, .flatpickr-next-month svg path {
+  fill: #fff !important;
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+}
+
+.flatpickr-monthDropdown-month {
+  color: #222222 !important;
   text-align: center;
-  font-size: 1.2rem;
+}
+
+.flatpickr-current-month {
+  color: #fff !important;
+}
+
+.flatpickr-calendar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.arrowTop::before {
+  display: none !important;
+}
+
+.selected {
+  color: #222222 !important;
+}
+
+.wrapper-agenda-content {
+  width: 280px;
+  margin: 20px auto;
+}
+.wrapper-agenda-content h1, .wrapper-agenda-content p, .wrapper-agenda-content button {
+  margin-top: 15px;
+  color: #fff;
+}
+.wrapper-agenda-content-none {
+  font-size: 1.5rem;
+  display: none;
 }
 
 .evenement-detail-content {
