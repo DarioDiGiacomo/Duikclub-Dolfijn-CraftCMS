@@ -1,12 +1,77 @@
 @use 'base' as *;
 
-.calendar-wrapper {
+//container agenda
+.container-agenda {
     width: 300px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
-.selected-date {
-    margin-top: 20px;
+//push year to the side
+.numInputWrapper {
+    margin-left: 1.5rem;
+}
+
+//days text color
+.flatpickr-day, .numInput, .today, .flatpickr-weekday {
+    color: $color-white !important;
+}
+
+//months chevrons
+.flatpickr-prev-month, .flatpickr-next-month {
+    svg {
+        path {
+            fill: $color-white !important;
+        }
+    }
+}
+
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: none !important;  
+}
+
+//dropdown month color
+.flatpickr-monthDropdown-month {
+    color: $color-black !important;
     text-align: center;
-    font-size: 1.2rem;
+}
+
+//dropdown month selected color
+.flatpickr-current-month {
+    color:$color-white !important;
+}
+
+//background full calendar and remove border
+.flatpickr-calendar {
+    background-color: transparent !important; 
+    box-shadow: none !important;
+}
+
+.arrowTop::before {
+    display: none !important;
+}
+
+//selected day
+.selected {
+    color: $color-black !important;
+}
+
+
+.wrapper-agenda {
+    &-content {
+        width: 280px;
+        margin: 20px auto;
+
+        h1, p, button {
+            margin-top: 15px;
+            color: $color-white;
+        }
+
+        &-none {
+            font-size: 1.5rem;
+            display: none;
+        }
+    }
 }
