@@ -60,7 +60,7 @@ data:
     validationOnFocus: false
     validationOnSubmit: true
   userDeletedAction: retain
-defaultStatus: c0355e3c-cfe1-4863-a306-b5e2635e449a # New
+defaultStatus: ab7b410c-5b58-4b20-aa31-08730f6588c1 # New
 handle: contactForm
 name: 'Contact Form'
 submitActionEntry: null

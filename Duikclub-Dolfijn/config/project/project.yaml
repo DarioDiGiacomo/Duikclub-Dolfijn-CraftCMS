@@ -1,4 +1,4 @@
-dateModified: 1715599013
+dateModified: 1716203748
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -13,38 +13,62 @@ fs:
     url: /files/images
 meta:
   __names__:
+    0d6e437c-cad8-40c4-8f06-4fc70d34c7b7: 'Event Location' # Event Location
+    3f5bba28-6c17-495e-ba00-f8ba434e02b4: 'Public Schema' # Public Schema
+    7a8cea59-b761-47c7-bd4e-6c20b48a95f4: 'Brevet Details' # Brevet Details
+    7f805254-7b80-475d-b90a-bf9948eb4e08: 'Gallerij Title' # Gallerij Title
+    8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: Page # Page
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
+    9c85eda4-2574-4951-a105-69258ccd401e: Evenementen # Evenementen
+    33a1b96b-d11a-4eba-a9df-06667936e05e: evenementen # evenementen
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
+    52a0697a-56b1-4445-891c-0cd70e4df0e8: 'Brevet Description' # Brevet Description
     82d7d074-f812-4c3c-a7c2-e94695f6b1f4: 'Duikclub Dolfijn' # Duikclub Dolfijn
+    83cb684c-fc16-44a8-8f54-27c09cc71efe: Gallerij # Gallerij
+    95ab2b1b-2368-4922-b8a8-c721d305b0eb: links # links
+    97f6ef56-6d55-41c8-a43f-04ec062224ff: 'Event Price' # Event Price
+    98cf5e85-dfb5-4bdb-a863-fea510a9f1f3: 'Link Destination' # Link Destination
+    381d2c41-f5ea-4233-b15f-6e0872931101: 'Evenementen Title' # Evenementen Title
+    524d7ed3-4a0b-4083-970c-f129139ed3f5: Header # Header
+    6874a386-bc56-486c-8bf3-c4c3786ca273: brevetten # brevetten
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
+    45646dc1-9e52-460d-896a-ff867284c170: 'Duik Informatie Nav' # Duik Informatie Nav
+    2830182f-de41-4285-b864-d835efdccff4: Tags # Tags
     a1f5ff61-2261-4570-be4f-b52acd6857cb: Images # Images
+    a6b37a3b-7ccd-4cbb-ad27-24c18f19fc0c: NavLinks # NavLinks
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
-    b4a04054-6677-4313-96a7-c2bfffe94857: 'Contact Form' # Contact Form
-    c0355e3c-cfe1-4863-a306-b5e2635e449a: New # New
+    ab7b410c-5b58-4b20-aa31-08730f6588c1: New # New
+    af37fdad-dc9d-4266-926e-753390503244: 'Contact Form' # Contact Form
+    b5110f84-3345-43fe-9de9-d8d78725d14f: Brevetten # Brevetten
+    ba6a27d7-3991-4ef1-bc38-3305244869d7: Simple # Simple
     c0788eb1-652f-4d6d-ae2e-d57e178dc8b3: 'Duikclub Dolfijn' # Duikclub Dolfijn
     c1d29cef-84a3-4a6c-aa79-b927fc624241: Images # Images
+    c751aa6a-595b-43e9-b450-fd22d6660bf6: Tags # Tags
+    d13a7851-9c43-4c29-a7ea-8beb53fa9eb4: 'Duik Informatie' # Duik Informatie
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
     db3a5384-72e7-41bd-9a3e-73c0c097b964: 'Begin Uur' # Begin Uur
     eeec348a-f847-40b5-b2d4-c1c27a1a6c48: Duiken # Duiken
+    f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
+    f281ce47-179e-4fed-ae32-f348a72e2505: Gallerij # Gallerij
+    f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
+    f9416568-3aa1-4e2e-b9b3-38dc72accc88: Tags # Tags
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
+    ff299e46-0e67-4a7a-8937-efec8d7b148c: 'Event Description' # Event Description
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   formie:
     edition: standard
     enabled: true
-    licenseKey: 1BHM1AE5K8W50UF1CG7WUDLA
+    licenseKey: LMQFZQXJD5HJ03V89WOHA4ID
     schemaVersion: 3.4.4
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'Duikclub Dolfijn'
   schemaVersion: 5.0.0.20
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  require2fa: false
-  requireEmailVerification: true

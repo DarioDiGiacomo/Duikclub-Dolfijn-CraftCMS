@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 33a1b96b-d11a-4eba-a9df-06667936e05e # evenementen
+handle: evenementen
+maxAuthors: 1
+name: Evenementen
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
+    enabledByDefault: true
+    hasUrls: true
+    template: _evenementen/_entry
+    uriFormat: 'evenementen/{slug}'
+structure:
+  maxLevels: null
+  uid: 02f4cb8c-a38c-48d5-9cff-7f15e9b1ad06
+type: structure

@@ -1,0 +1,18 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 6874a386-bc56-486c-8bf3-c4c3786ca273 # brevetten
+handle: brevetten
+maxAuthors: 1
+name: Brevetten
+propagationMethod: all
+siteSettings:
+  82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 6725020a-73ec-4249-994f-c472be0c70b0
+type: structure

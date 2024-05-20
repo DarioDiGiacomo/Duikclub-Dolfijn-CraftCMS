@@ -284,7 +284,7 @@ body {
   background-color: #2e96cb;
 }
 
-.standard-button:active {
+.active-button {
   background-color: #0f6b98;
 }
 
@@ -597,12 +597,13 @@ body {
   width: 100%;
   object-fit: cover;
   max-height: 90svh;
-  filter: brightness(70%);
+  filter: brightness(50%);
 }
 .duiken-banner-content {
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 80%;
   gap: 0.6rem;
@@ -622,11 +623,19 @@ body {
   gap: 0.9rem;
   margin-top: 2.5rem;
 }
+.duiken-banner-content .bottom-text .activeLink {
+  color: #222222;
+}
 .duiken-banner-content .bottom-text a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 300;
   font-weight: 400;
   color: #fff;
+}
+.duiken-banner-content .bottom-text .active-link {
+  color: #0D7EE5;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .opleiding-card {
@@ -720,6 +729,55 @@ body {
 .section h1 {
   color: #fff;
 }
+.section-filter {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10000;
+}
+.section-filter-close-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.section-filter-tags {
+  background-color: #fff;
+  border: 1px solid rgba(58, 74, 90, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #012336;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  padding: 0.6rem 1.15rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.section .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
 .section-gallerywrapper {
   place-content: center;
   place-items: center;
@@ -743,28 +801,47 @@ body {
   transition: 0.2s ease-in-out;
   transform: scale(1.1);
 }
+.section-error {
+  color: #fff;
+  text-align: center;
+}
 .section-pages {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1.25rem;
 }
-.section-pages a {
-  font-weight: 700;
-  padding: 1.25rem 1.15rem;
-  background-color: #0D7EE5;
-  border-radius: 3px;
-  color: #fff;
+.section-filter-button {
+  margin: 1rem 4rem;
+}
+.section-filter-active {
+  transform: translateX(0);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
+  .section-filter {
+    width: 100%;
+    margin: 1rem 4rem;
+    overflow-x: inherit;
+  }
   .section-gallerywrapper {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 90%;
+  }
+  .section-gallerywrapper-item {
+    width: 100%;
+  }
+  .section-gallerywrapper-item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
   }
 }
 @media only screen and (min-width: 1366px) {
-  .section h1 {
-    color: #fff;
+  .section-filter {
+    overflow-x: inherit;
+    width: 25%;
   }
   .section-gallerywrapper {
     margin: 1.25rem 0;
@@ -776,7 +853,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
   .section-gallerywrapper-item {
-    border: 1px solid green;
     transition: 0.2s ease-in-out;
     width: 100%;
   }

@@ -1,0 +1,18 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 2830182f-de41-4285-b864-d835efdccff4 # Tags
+handle: tags
+maxAuthors: 1
+name: Tags
+propagationMethod: all
+siteSettings:
+  82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 2654ddae-38f2-4d51-97c3-ea1d0d50f1ec
+type: structure
