@@ -804,8 +804,18 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
   .section-filter {
     width: 100%;
-    margin: 1rem 4rem;
     overflow-x: inherit;
+  }
+  .section-filter h1 {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .section .form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
   }
   .section-gallerywrapper {
     grid-template-columns: repeat(2, 1fr);
