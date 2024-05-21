@@ -44,26 +44,28 @@
 			</div>
 		</div>
 		{% block content %}{% endblock %}
-		<footer class="footer">
-			<div class="footer-text">
-				<h2>#kopjeonder</h2>
-			</div>
-			<div class="footer-links">
-				<a href="#">reglement</a>
-				<a href="#">algemene voorwaarden</a>
-				<a href="#">privacy verklaring</a>
-			</div>
-			<div>
-				<div class="social"></div>
-				<div class="social"></div>
-				<div class="social"></div>
-			</div>
+		 <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-text">
+                <h2>#kopjeonder</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#">reglement</a>
+                <a href="#">algemene voorwaarden</a>
+                <a href="#">privacy verklaring</a>
+            </div>
+            <div class="footer-social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
 			<div class="footer-federations">
 				{% for federations in home.images.all() %}
 					<img src="{{federations.url}}" alt="{{federations.title}}">
 				{% endfor %}
 			</div>
-			<p>@ copyright: Duikclub Dolfijn</p>
-		</footer>
+        </div>    
+        <p>@ copyright: Duikclub Dolfijn</p>
+    </footer>
 	</body>
 </html>

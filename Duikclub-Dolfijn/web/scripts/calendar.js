@@ -5,3 +5,4 @@ document.addEventListener('DOMContentLoaded', function() {
             updateContent(dateStr);
         }
     });
+});
