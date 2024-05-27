@@ -26,18 +26,18 @@
 
 {% if evenement is defined %}
 
-	<div class="section-card evenementen-card">
-		<h1>{{card.title}}</h1>
-		<p>{{card.eventLocation.one()}}</p>
-		<p>{{card.datum | date("d F", locale="nl-BE")}}</p>
+		<div class="section-card evenementen-card">
+			<h1>{{card.title}}</h1>
+			<p>{{card.eventLocation.one()}}</p>
+			<p>{{card.datum | date("d F", locale="nl-BE")}}</p>
 
-		<div class="section-card-bottom evenementen-card-bottom">
-			<p>{{card.beginUur | date("H:i")}} - {{card.eindUur | date("H:i")}}</p>
-			<a href="{{card.url}}">
-				<button class="standard-button card-button">DETAILS</button>
-			</a>
+			<div class="section-card-bottom evenementen-card-bottom">
+				<p>{{card.beginUur | date("H:i")}} - {{card.eindUur | date("H:i")}}</p>
+				<a href="{{card.url}}">
+					<button class="standard-button card-button">DETAILS</button>
+				</a>
+			</div>
 		</div>
-	</div>
 
 {% endif %}
 
