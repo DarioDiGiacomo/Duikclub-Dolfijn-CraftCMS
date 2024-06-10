@@ -38,10 +38,10 @@
 	<div class="section">
 		<h1 class="section-title">{{ pageTitle }}</h1>
 
-		<button class="section-filter-button standard-button" id="toggle-filter">Filters</button>
+		<button class="section-filter-button standard-button" id="toggle-filter" onclick="toggleFilters()">Filters</button>
 
 		<div class="section-filter" id="filter-menu">
-			<button class="section-filter-close-button" id="close-filter">&times;</button>
+			<button class="section-filter-close-button" id="close-filter" onclick="closeFilters()">&times;</button>
 			<h1>Filters</h1>
 			<form method="get" action="" class="form" id="filter-form">
 				<select name="tags" id="tag-filter" class="section-filter-tags">
@@ -113,11 +113,7 @@
 	{% endif %}
 
 	<script>
-		document.getElementById('toggle-filter').addEventListener('click', function () {
-document.getElementById('filter-menu').classList.toggle('section-filter-active');
-document.body.classList.toggle('no-scroll');
 
-});
 
 document.getElementById('close-filter').addEventListener('click', function () {
 document.getElementById('filter-menu').classList.remove('section-filter-active');

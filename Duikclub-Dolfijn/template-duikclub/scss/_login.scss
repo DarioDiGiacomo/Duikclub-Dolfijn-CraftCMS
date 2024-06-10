@@ -10,13 +10,13 @@
         align-items: center;
         flex-direction: column;
         margin: 3.15rem 0;
-    
+
         &-content {
             @include title_text();
             color: $color-white;
             margin: 0 0 0.65rem 0;
         }
-    
+
         &-form {
             #loginForm {
                 display: flex;
@@ -24,18 +24,21 @@
                 align-items: start;
                 flex-direction: column;
 
-                #password-forgot {
-                    @include paragraph_text(1.15rem);
-                    text-decoration: underline;
-                    color: $color-white;
-                }
-    
                 label {
                     @include paragraph_text(1.25rem);
                     color: $color-white;
                     margin: 1.25rem 0 0.65rem 0;
                 }
-    
+
+                label.remember {
+                    display: flex;
+                    align-items: center; 
+                    gap: .5rem;
+                    @include paragraph_text(1.15rem);
+                    color: $color-white;
+                    margin: 1.25rem 0 0.65rem 0;
+                }
+
                 input {
                     @include paragraph_text(1rem);
                     padding: 6px 3px;
@@ -43,17 +46,88 @@
                     border-radius: 6px;
                     width: 100%;
                 }
-    
+
+                input[type=checkbox] {
+                    cursor: default;
+                }
+
+                #rememberMe {
+                    appearance: none;
+                    background-color: #dfe1e4;
+                    border-radius: 72px;
+                    border-style: none;
+                    flex-shrink: 0;
+                    height: 20px;
+                    margin: 0;
+                    position: relative;
+                    width: 30px;
+                    transition: all 100ms ease-out;
+                    box-shadow: none;
+
+
+                    &:hover {
+                        background-color: #c9cbcd;
+                        transition-duration: 0s;
+                    }
+
+                    &:checked {
+                        background-color: $color-primary;
+                    }
+
+                    &:checked::after {
+                        background-color: #fff;
+                        left: 13px;
+                    }
+                    
+                    :checked:hover {
+                        background-color: #535db3;
+                      }
+                    
+
+                    &::before {
+                        bottom: -6px;
+                        content: "";
+                        left: -6px;
+                        position: absolute;
+                        right: -6px;
+                        top: -6px;
+                    }
+
+                    &::after {
+                        transition: all 100ms ease-out;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        content: "";
+                        height: 14px;
+                        left: 3px;
+                        position: absolute;
+                        top: 3px;
+                        width: 14px;
+
+                    }
+
+                }
+
                 input:focus {
                     border-color: $color-primary;
                     outline: none;
                     box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
                 }
-    
+
                 button {
                     margin-top: 1.25rem;
                     width: 100%;
                 }
+            }
+        }
+
+        #password-forgot {
+            margin: 1rem 0;
+            @include paragraph_text(1.15rem);
+
+            a {
+                color: $color-white;
+                text-decoration: underline;
             }
         }
     }
@@ -62,23 +136,23 @@
 // Media Queries
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .login-wrapper {
-    
+
         .login-container {
             margin: 3.15rem 0;
-        
+
             &-content {
                 @include title_text(2rem);
                 color: $color-white;
                 margin: 0 0 0.65rem 0;
             }
-        
+
             &-form {
                 #loginForm {
                     display: flex;
                     justify-content: center;
                     align-items: start;
                     flex-direction: column;
-        
+
                     #password-forgot {
                         @include paragraph_text(1.5rem);
                         text-decoration: underline;
@@ -90,14 +164,14 @@
                         color: $color-white;
                         margin: 1.25rem 0 0.65rem 0;
                     }
-        
+
                     input {
                         @include paragraph_text(1.5rem);
                         padding: 0.65rem;
                         border: 1px solid $color-white;
                         border-radius: 6px;
                     }
-        
+
                     input:focus {
                         border-color: $color-primary;
                         outline: none;
@@ -111,23 +185,23 @@
 
 @media only screen and (min-width: 1366px) {
     .login-wrapper {
-    
+
         .login-container {
             margin: 3.15rem 0;
-        
+
             &-content {
                 @include title_text(2rem);
                 color: $color-white;
                 margin: 0 0 0.65rem 0;
             }
-        
+
             &-form {
                 #loginForm {
                     display: flex;
                     justify-content: center;
                     align-items: start;
                     flex-direction: column;
-        
+
                     #password-forgot {
                         @include paragraph_text(1.5rem);
                         text-decoration: underline;
@@ -139,14 +213,14 @@
                         color: $color-white;
                         margin: 1.25rem 0 0.65rem 0;
                     }
-        
+
                     input {
                         @include paragraph_text(1.5rem);
                         padding: 0.65rem;
                         border: 1px solid $color-white;
                         border-radius: 6px;
                     }
-        
+
                     input:focus {
                         border-color: $color-primary;
                         outline: none;
