@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duikclub Dolfijn</title>
+
+    <!-- Library's -->
+    <script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../web/css/main.css">
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Fonts -->
+    <link href="/assets/fonts/StageGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/assets/fonts/StageGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/assets/fonts/StageGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/assets/fonts/StageGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body>
+    <div class="navigation">
+        <div class="profile-picture"></div>
+        <a href="#"><img src="../assets/images/logos/Dolfijn.png" alt="logo_dolfijn" class="logo"></a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div id="menu-overlay">
+            <ul>
+                <li><a href="../html/duiken.html">Duiken</a></li>
+                <li><a href="#">Gallerij</a></li>
+                <li><a href="../html/evenementen.html">Evenementen</a></li>
+                <li><a href="#">Leden</a></li>
+                <li><a href="#">Over ons</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="login-container-content">
+                <h1>Login</h1>
+            </div>
+
+            <div class="login-container-form">
+                <form id="loginForm" action="">
+                    <label for="userEmail">Gebruikersnaam of Email</label>
+                    <input type="text" id="userEmail" name="userEmail" required>
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" id="password" name="password">
+                    <label for="password-forgot"><a href="#" id="password-forgot">Wachtwoord vergeten?</a></label>
+                    <button class="standard-button" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-text">
+                <h2>#kopjeonder</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#">reglement</a>
+                <a href="#">algemene voorwaarden</a>
+                <a href="#">privacy verklaring</a>
+            </div>
+            <div class="footer-social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <div class="footer-federations">
+                <img src="../assets/images/logos/Nelos.png" alt="Nelos Logo">
+                <img src="../assets/images/logos/Limos.png" alt="Limos Logo">
+                <img src="../assets/images/logos/Cmas.png" alt="Cmas Logo">
+                <img src="../assets/images/logos/SportVlaanderen.png" alt="Sport Vlaanderen Logo">
+            </div>
+        </div>    
+        <p>@ copyright: Duikclub Dolfijn</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../web/scripts/navigation_menu.js"></script>
+    <script src="../../web/scripts/calendar.js"></script>
+
+</body>
+</html>

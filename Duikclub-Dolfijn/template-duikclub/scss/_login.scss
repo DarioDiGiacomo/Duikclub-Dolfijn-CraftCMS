@@ -1,0 +1,159 @@
+@use 'base' as *;
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 3.15rem 0;
+    
+        &-content {
+            @include title_text();
+            color: $color-white;
+            margin: 0 0 0.65rem 0;
+        }
+    
+        &-form {
+            #loginForm {
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+
+                #password-forgot {
+                    @include paragraph_text(1.15rem);
+                    text-decoration: underline;
+                    color: $color-white;
+                }
+    
+                label {
+                    @include paragraph_text(1.25rem);
+                    color: $color-white;
+                    margin: 1.25rem 0 0.65rem 0;
+                }
+    
+                input {
+                    @include paragraph_text(1rem);
+                    padding: 6px 3px;
+                    border: 1px solid $color-white;
+                    border-radius: 6px;
+                    width: 100%;
+                }
+    
+                input:focus {
+                    border-color: $color-primary;
+                    outline: none;
+                    box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
+                }
+    
+                button {
+                    margin-top: 1.25rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .login-wrapper {
+    
+        .login-container {
+            margin: 3.15rem 0;
+        
+            &-content {
+                @include title_text(2rem);
+                color: $color-white;
+                margin: 0 0 0.65rem 0;
+            }
+        
+            &-form {
+                #loginForm {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    flex-direction: column;
+        
+                    #password-forgot {
+                        @include paragraph_text(1.5rem);
+                        text-decoration: underline;
+                        color: $color-white;
+                    }
+
+                    label {
+                        @include paragraph_text(1.75rem);
+                        color: $color-white;
+                        margin: 1.25rem 0 0.65rem 0;
+                    }
+        
+                    input {
+                        @include paragraph_text(1.5rem);
+                        padding: 0.65rem;
+                        border: 1px solid $color-white;
+                        border-radius: 6px;
+                    }
+        
+                    input:focus {
+                        border-color: $color-primary;
+                        outline: none;
+                        box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .login-wrapper {
+    
+        .login-container {
+            margin: 3.15rem 0;
+        
+            &-content {
+                @include title_text(2rem);
+                color: $color-white;
+                margin: 0 0 0.65rem 0;
+            }
+        
+            &-form {
+                #loginForm {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    flex-direction: column;
+        
+                    #password-forgot {
+                        @include paragraph_text(1.5rem);
+                        text-decoration: underline;
+                        color: $color-white;
+                    }
+
+                    label {
+                        @include paragraph_text(1.75rem);
+                        color: $color-white;
+                        margin: 1.25rem 0 0.65rem 0;
+                    }
+        
+                    input {
+                        @include paragraph_text(1.5rem);
+                        padding: 0.65rem;
+                        border: 1px solid $color-white;
+                        border-radius: 6px;
+                    }
+        
+                    input:focus {
+                        border-color: $color-primary;
+                        outline: none;
+                        box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
