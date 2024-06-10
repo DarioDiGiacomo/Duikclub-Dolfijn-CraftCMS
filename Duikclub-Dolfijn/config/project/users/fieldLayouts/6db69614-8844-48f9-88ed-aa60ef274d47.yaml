@@ -64,21 +64,6 @@ tabs:
         width: 100
       -
         elementCondition: null
-        fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
-        handle: wachtwoord
-        includeInCards: false
-        instructions: null
-        label: wachtwoord
-        providesThumbs: false
-        required: true
-        tip: null
-        type: craft\fieldlayoutelements\CustomField
-        uid: 964d7e1f-0f1b-4278-b587-3aa889076a59
-        userCondition: null
-        warning: null
-        width: 100
-      -
-        elementCondition: null
         id: null
         includeInCards: false
         instructions: null

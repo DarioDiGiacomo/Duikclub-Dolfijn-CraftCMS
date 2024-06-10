@@ -1,4 +1,4 @@
-dateModified: 1716276804
+dateModified: 1716880413
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -20,6 +20,7 @@ meta:
     8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: Page # Page
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
     9c85eda4-2574-4951-a105-69258ccd401e: Evenementen # Evenementen
+    19c956a5-7736-4514-8628-bfe619462e64: login # login
     33a1b96b-d11a-4eba-a9df-06667936e05e: evenementen # evenementen
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
     52a0697a-56b1-4445-891c-0cd70e4df0e8: 'Brevet Description' # Brevet Description
@@ -35,9 +36,11 @@ meta:
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
     10008e6f-6ccb-4b28-9969-670eafdd8963: HeroTitle # HeroTitle
     45646dc1-9e52-460d-896a-ff867284c170: 'Duik Informatie Nav' # Duik Informatie Nav
+    98070df5-e4cf-47f1-8d1e-93c95630e975: Gebruikers # Gebruikers
     2830182f-de41-4285-b864-d835efdccff4: Tags # Tags
     a1f5ff61-2261-4570-be4f-b52acd6857cb: Images # Images
     a6b37a3b-7ccd-4cbb-ad27-24c18f19fc0c: NavLinks # NavLinks
+    a629c1c2-fdd7-4d89-b5c0-d80c8b3d204a: Login # Login
     a929e144-72f1-40c6-bd10-bc396a2d7696: Logo # Logo
     b5110f84-3345-43fe-9de9-d8d78725d14f: Brevetten # Brevetten
     ba6a27d7-3991-4ef1-bc38-3305244869d7: Simple # Simple
