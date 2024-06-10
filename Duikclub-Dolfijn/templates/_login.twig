@@ -3,43 +3,55 @@
 {% set pageTitle = entry.title %}
 
 {% block content %}
-	<div class="section">
-		<h1 class="section-title">{{pageTitle}}</h1>
 
-		<form method="post" accept-charset="UTF-8">
-			{{ csrfInput() }}
-			{{ actionInput('users/login') }}
+	<div class="login-wrapper">
+		<div class="login-container">
+			<div class="login-container-content">
+				<h1>{{pageTitle}}</h1>
+			</div>
+			{% if craft.app.user.isGuest %}
+				<div class="login-container-form">
+					<form method="post" id="loginForm" accept-charset="UTF-8">
+						{{ csrfInput() }}
+						{{ actionInput('users/login') }}
 
-			<label for="loginName">Username or email</label>
-			{{ input('text', 'loginName', craft.app.user.rememberedUsername, {
-    id: 'loginName',
-    autocomplete: 'username'
-  }) }}
+						<label for="loginName">Username or email</label>
+						{{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+						id: 'loginName',
+						autocomplete: 'username'
+						}) }}
 
-			<label for="password">Password</label>
-			{{ input('password', 'password', null, {
-    id: 'password',
-  }) }}
+						<label for="password">Password</label>
+						{{ input('password', 'password', null, {
+						id: 'password',
+						}) }}
 
-			<label>
-				{{ input('checkbox', 'rememberMe', '1') }}
-				Remember me
-			</label>
+						<label class="remember">
+							{{ input('checkbox', 'rememberMe', '1', {
+								id: 'rememberMe',
+							}) }}
+							Remember me
+						</label>
 
-			<button>Login</button>
+						<button class="standard-button">Login</button>
 
-			{% if errorMessage is defined %}
-				<p>{{ errorMessage }}</p>
+						{% if errorMessage is defined %}
+							<p>{{ errorMessage }}</p>
+						{% endif %}
+					</form>
+
+					<p id="password-forgot">
+						<a href="{{ url('reset-password') }}">Forgot your password?</a>
+					</p>
+				</div>
+			{% else %}
+				<div class="login-container-form">
+					<form method="post" action="{{ url('logout') }}">
+						{{ csrfInput() }}
+						<button type="submit" class="standard-button">Uitloggen</button>
+					</form>
+				</div>
 			{% endif %}
-		</form>
-
-		<p>
-			<a href="{{ url('reset-password') }}">Forgot your password?</a>
-		</p>
+		</div>
 	</div>
-
-  <form method="post" action="{{ url('logout') }}">
-    {{ csrfInput() }}
-    <button type="submit">Uitloggen</button>
-</form>
-{% endblock %}
+</div>{% endblock %}

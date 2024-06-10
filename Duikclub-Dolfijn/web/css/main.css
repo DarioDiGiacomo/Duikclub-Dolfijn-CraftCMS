@@ -40,15 +40,20 @@ body {
   width: 6.25rem;
   height: 6.25rem;
 }
+.navigation #menu-overlay.active {
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in-out;
+}
 .navigation #menu-overlay {
-  display: none;
-  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1000;
+  height: 100svh;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.965);
-  z-index: 1000;
 }
 .navigation #menu-overlay ul {
   list-style-type: none;
@@ -162,7 +167,8 @@ body {
   padding: 0.6rem 0.9rem;
   width: 100%;
 }
-.section-card h1, .section-card p {
+.section-card h1,
+.section-card p {
   color: #fff;
 }
 .section-card h1 {
@@ -939,14 +945,17 @@ select {
   align-items: start;
   flex-direction: column;
 }
-.login-wrapper .login-container-form #loginForm #password-forgot {
-  font-size: 1.15rem;
-  font-weight: 300;
-  text-decoration: underline;
-  color: #fff;
-}
 .login-wrapper .login-container-form #loginForm label {
   font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 1.25rem 0 0.65rem 0;
+}
+.login-wrapper .login-container-form #loginForm label.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
   font-weight: 300;
   color: #fff;
   margin: 1.25rem 0 0.65rem 0;
@@ -959,6 +968,55 @@ select {
   border-radius: 6px;
   width: 100%;
 }
+.login-wrapper .login-container-form #loginForm input[type=checkbox] {
+  cursor: default;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe {
+  appearance: none;
+  background-color: #dfe1e4;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+  transition: all 100ms ease-out;
+  box-shadow: none;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe:hover {
+  background-color: #c9cbcd;
+  transition-duration: 0s;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe:checked {
+  background-color: #0D7EE5;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe:checked::after {
+  background-color: #fff;
+  left: 13px;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe :checked:hover {
+  background-color: #535db3;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+.login-wrapper .login-container-form #loginForm #rememberMe::after {
+  transition: all 100ms ease-out;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
 .login-wrapper .login-container-form #loginForm input:focus {
   border-color: #0D7EE5;
   outline: none;
@@ -967,6 +1025,15 @@ select {
 .login-wrapper .login-container-form #loginForm button {
   margin-top: 1.25rem;
   width: 100%;
+}
+.login-wrapper .login-container #password-forgot {
+  margin: 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+.login-wrapper .login-container #password-forgot a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
