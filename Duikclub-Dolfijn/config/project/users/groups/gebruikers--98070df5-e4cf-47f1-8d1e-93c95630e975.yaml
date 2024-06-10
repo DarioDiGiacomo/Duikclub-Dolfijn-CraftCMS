@@ -1,0 +1,11 @@
+description: ''
+handle: gebruikers
+name: Gebruikers
+permissions:
+  - accesscp
+  - 'createentries:9c85eda4-2574-4951-a105-69258ccd401e' # Evenementen
+  - 'createentries:eeec348a-f847-40b5-b2d4-c1c27a1a6c48' # Duiken
+  - 'saveentries:9c85eda4-2574-4951-a105-69258ccd401e' # Evenementen
+  - 'saveentries:eeec348a-f847-40b5-b2d4-c1c27a1a6c48' # Duiken
+  - 'viewentries:9c85eda4-2574-4951-a105-69258ccd401e' # Evenementen
+  - 'viewentries:eeec348a-f847-40b5-b2d4-c1c27a1a6c48' # Duiken

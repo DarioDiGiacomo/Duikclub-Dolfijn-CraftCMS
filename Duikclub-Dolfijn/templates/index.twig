@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 {% set logo = home.logo.one() %}
 {% set image = home.image.one()  %}
+{% set login = craft.entries.section('login').one()  %}
+{% set gallerij = craft.entries.section('gallerijtitle').one()  %}
 
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Duikclub Dolfijn | {{ pageTitle }}</title>
+		<title>Duikclub Dolfijn |
+			{{ pageTitle }}</title>
 
 		<!-- Scripts -->
 		<script src="{{siteUrl}}scripts/navigation_menu.js"></script>
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="{{siteUrl}}css/main.css">
+		<link
+		rel="stylesheet" href="{{siteUrl}}css/main.css">
 
 		<!-- Library's -->
-    	<script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
 
 		<!-- Fonts -->
 		<link href="/assets/fonts/StageGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,7 +30,12 @@
 	</head>
 	<body>
 		<div class="navigation">
-			<div class="profile-picture" style="background-image: url('{{image.url}}');"></div>
+			{% if currentUser is null %}
+				<a href="{{ login.url }}" class="profile-picture" style="background-image: url('{{ image.url }}');"></a>
+			{% else %}
+				<a href="{{ gallerij.url }}" class="profile-picture" style="background-image: url('{{ image.url }}');"></a>
+
+			{% endif %}
 			<a href="{{siteUrl}}"><img src="{{ logo.url }}" alt="{{ logo.title }}" class="logo"></a>
 			<div class="menu-icon" onclick="toggleMenu()">
 				<div class="line"></div>
@@ -36,36 +45,39 @@
 
 			<div id="menu-overlay">
 				<ul>
-				{% for link in header.navlinks.all() %}
-					{% set destination = link.linkDestination.one() %}
-					<li><a href="{{ destination.url }}">{{ link.title }}</a></li>
-				{% endfor %}
+					{% for link in header.navlinks.all() %}
+						{% set destination = link.linkDestination.one() %}
+						<li>
+							<a href="{{ destination.url }}">{{ link.title }}</a>
+						</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
-		{% block content %}{% endblock %}
-		 <footer class="footer">
-        <div class="footer-wrapper">
-            <div class="footer-text">
-                <h2>#kopjeonder</h2>
-            </div>
-            <div class="footer-links">
-                <a href="#">reglement</a>
-                <a href="#">algemene voorwaarden</a>
-                <a href="#">privacy verklaring</a>
-            </div>
-            <div class="footer-social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-tiktok"></i>
-            </div>
-			<div class="footer-federations">
-				{% for federations in home.images.all() %}
-					<img src="{{federations.url}}" alt="{{federations.title}}">
-				{% endfor %}
+		{% block content %}
+		{% endblock %}
+		<footer class="footer">
+			<div class="footer-wrapper">
+				<div class="footer-text">
+					<h2>#kopjeonder</h2>
+				</div>
+				<div class="footer-links">
+					<a href="#">reglement</a>
+					<a href="#">algemene voorwaarden</a>
+					<a href="#">privacy verklaring</a>
+				</div>
+				<div class="footer-social">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-instagram"></i>
+					<i class="fa-brands fa-tiktok"></i>
+				</div>
+				<div class="footer-federations">
+					{% for federations in home.images.all() %}
+						<img src="{{federations.url}}" alt="{{federations.title}}">
+					{% endfor %}
+				</div>
 			</div>
-        </div>    
-        <p>@ copyright: Duikclub Dolfijn</p>
-    </footer>
+			<p>@ copyright: Duikclub Dolfijn</p>
+		</footer>
 	</body>
 </html>

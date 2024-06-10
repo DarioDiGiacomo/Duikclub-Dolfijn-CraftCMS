@@ -1,4 +1,6 @@
 {% extends 'index' %}
+{% requireLogin %}
+
 
 {% set gallerijEntries = craft.entries.section('gallerij').all() %}
 {% set tags = craft.entries.section('tags').all() %}
