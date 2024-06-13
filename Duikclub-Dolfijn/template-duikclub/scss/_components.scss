@@ -50,22 +50,62 @@
         ul {
             list-style-type: none;
             padding: 0;
-            margin: 0 0 0 0;
+            margin: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 3.15rem;
+            gap: 1.8rem;
             height: 100%;
+            margin-top: 1rem;
 
+            #leden-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid transparent;
+                margin: 0;
+
+                &.active {
+                    border: 2px solid $color-primary;
+                    padding: 1.5rem 2rem;
+                    border-radius: 1%;
+                }
+            }
 
             li {
-                margin-bottom: 1.25rem;
 
                 a {
                     color: white;
                     text-decoration: none;
                     font-size: 1.75rem;
+                }
+
+                .submenu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    display: none;
+                    list-style: none;
+                    margin-top: 2rem;
+
+                    li {
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 0.5rem;
+
+                        a {
+                            @include paragraph_text(1.5rem);
+                        }
+                    }
+
+                    &.active {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 0.5rem;
+                    }
                 }
             }
         }
@@ -119,7 +159,6 @@
         }
     }
 }
-
 
 // Banner
 .centered-banner {
@@ -452,8 +491,24 @@
         #menu-overlay {
             li {
                 a {
-                    margin-left: 1.9rem;
+                    margin-left: 1rem;
                     font-size: 3.15rem;
+                }
+            }
+
+            #leden-wrapper {
+
+                &.active {
+                    margin-left: 1.9rem;
+
+                    #leden-link {
+                        margin: 0;
+                    }
+                    li {
+                        a {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
