@@ -1,4 +1,4 @@
-dateModified: 1716880413
+dateModified: 1718284420
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -73,5 +73,6 @@ system:
   edition: pro
   live: true
   name: 'Duikclub Dolfijn'
+  retryDuration: null
   schemaVersion: 5.0.0.20
   timeZone: America/Los_Angeles

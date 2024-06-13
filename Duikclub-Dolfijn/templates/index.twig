@@ -27,10 +27,25 @@
 		<link href="/assets/fonts/StageGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
 		<link href="/assets/fonts/StageGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
+		<link rel="icon" href="{{siteUrl}}favicon.ico" type="image/x-icon">
+		<link rel="icon" href="{{siteUrl}}favicon.png" sizes="32x32" type="image/png">
+		<link rel="icon" href="{{siteUrl}}favicon.png" sizes="16x16" type="image/png">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 	</head>
 	<body>
 		<div class="navigation">
-				<a href="{{ login.url }}" class="profile-picture" style="background-image: url('{{ image.url }}');"></a>
+			{% if currentUser %}
+				{% if currentUser.photo %}
+					{% set userPhoto = currentUser.photo %}
+					<a href="{{ login.url }}" class="profile-picture" style="background-image: url('{{ userPhoto.getUrl() }}');"></a>
+				{% else %}
+					<!-- Als er geen gebruikersafbeelding is, toon een standaardafbeelding -->
+					<a href="{{ login.url }}" class="profile-picture" style="background-image: url('{{siteUrl}}favicon.png');"></a>
+				{% endif %}
+			{% else %}
+				<a href="{{ login.url }}" class="profile-picture" style="background: center bottom url('{{siteUrl}}user-solid.svg'); background-size: 65%; background-repeat:no-repeat; background-color:#1b1b1b;"></a>
+			{% endif %}
 			<a href="{{siteUrl}}"><img src="{{ logo.url }}" alt="{{ logo.title }}" class="logo"></a>
 			<div class="menu-icon" id="menu-icon" onclick="toggleScroll()">
 				<div class="line"></div>
@@ -49,8 +64,7 @@
 				</ul>
 			</div>
 		</div>
-		{% block content %}
-		{% endblock %}
+		{% block content %}{% endblock %}
 		<footer class="footer">
 			<div class="footer-wrapper">
 				<div class="footer-text">

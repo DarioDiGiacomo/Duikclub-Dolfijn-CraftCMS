@@ -17,6 +17,7 @@ function toggleFilters() {
         lockScroll();
     }
 }
+
 function closeFilters() {
     document.getElementById('filter-menu').classList.remove('section-filter-active');
     unlockScroll();
@@ -32,11 +33,13 @@ function getScrollbarWidth() {
 function lockScroll() {
     const scrollbarWidth = getScrollbarWidth();
     document.body.style.paddingRight = `${scrollbarWidth}px`;
+    document.getElementById('menu-overlay').style.paddingRight = `${scrollbarWidth}px`;
     document.body.classList.add('no-scroll');
 }
 
 // Functie om scrollen te ontgrendelen
 function unlockScroll() {
     document.body.style.paddingRight = '';
+    document.getElementById('menu-overlay').style.paddingRight = '';
     document.body.classList.remove('no-scroll');
 }
