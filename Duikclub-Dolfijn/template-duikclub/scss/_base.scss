@@ -27,6 +27,11 @@ body {
     overflow: hidden;
 }
 
+.width-fix {
+    max-width: 1520px;
+    margin: auto;
+}
+
 @mixin header_text($font-size: 3rem) {
     font-size: $font-size;
     font-weight: 700;

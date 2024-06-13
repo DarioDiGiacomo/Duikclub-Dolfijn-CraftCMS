@@ -16,6 +16,11 @@ body {
   overflow: hidden;
 }
 
+.width-fix {
+  max-width: 1520px;
+  margin: auto;
+}
+
 .navigation {
   height: 8svh;
   min-width: 22.5rem;
@@ -31,6 +36,7 @@ body {
   background-image: url(../../template-duikclub/assets/images/animals/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
   z-index: 1001;
 }
 .navigation a {
@@ -299,10 +305,10 @@ body {
   margin: 2.5rem 0 0 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
   .standard-button {
     font-size: 1.25rem;
-    padding: 0.9rem 1.5rem;
+    padding: 0.9rem 1.25rem;
   }
   .navigation {
     padding: 0 3.75rem;
@@ -358,7 +364,7 @@ body {
     font-weight: 300;
   }
   .footer-social i {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
   .footer p {
     margin-top: 1rem;
@@ -366,10 +372,10 @@ body {
     font-weight: 300;
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
   .standard-button {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    padding: 0.9rem 1.25rem;
   }
   .navigation {
     height: 10svh;
@@ -395,7 +401,7 @@ body {
     font-weight: 700;
   }
   .section-title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin: 1.5rem 0 0 6.25rem;
   }
@@ -407,15 +413,15 @@ body {
     width: calc(25% - 1.25rem);
   }
   .section-card h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 500;
   }
   .section-card p {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
     font-weight: 300;
   }
   .footer-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
     font-weight: 700;
   }
@@ -423,23 +429,23 @@ body {
     margin: 1.25rem 0;
   }
   .footer-links a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
   }
   .footer-social i {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .footer-federations {
     gap: 3.75rem;
   }
   .footer-federations img {
-    width: 10%;
+    width: 9%;
   }
   .footer-federations img:nth-child(1) {
-    width: 11%;
+    width: 10%;
   }
   .footer-federations img:nth-child(3) {
-    width: 6%;
+    width: 5%;
   }
   .footer p {
     margin-top: 1.9rem;
@@ -517,7 +523,7 @@ body {
   margin: 1.25rem 0 0 1.9rem;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
   .banner-text {
     margin-left: 3.75rem;
   }
@@ -552,7 +558,7 @@ body {
     margin: 1.25rem 0 0 3.15rem;
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
   .banner-text {
     margin: 0 0 4.4rem 6.25rem;
   }
@@ -573,13 +579,13 @@ body {
     font-size: 2.5rem;
   }
   .info-content h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin: 1.55rem 0 0 6.25rem;
   }
   .info-content p {
     width: 60%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin: 0.6rem 0 0 6.25rem;
   }
@@ -656,7 +662,7 @@ body {
   justify-content: flex-end;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
   .duiken-banner-content {
     gap: 20px;
   }
@@ -669,13 +675,14 @@ body {
     font-weight: 300;
   }
   .duiken-banner-content .bottom-text a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 300;
     font-weight: 400;
     color: #fff;
+    margin: 0 10px;
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
   .duiken-banner-content {
     gap: 30px;
   }
@@ -736,6 +743,10 @@ select {
   box-shadow: none !important;
 }
 
+.flatpickr-input {
+  color: red;
+}
+
 .arrowTop::before {
   display: none !important;
 }
@@ -780,6 +791,54 @@ select {
   margin: 0.5rem 0 0 0;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
+  .evenement-detail-content {
+    margin: 1.25rem 1.9rem 0 1.9rem;
+  }
+  .evenement-detail-content h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-weight: 700;
+    color: #0D7EE5;
+  }
+  .evenement-detail-content h2, .evenement-detail-content p {
+    color: #fff;
+  }
+  .evenement-detail-content h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1.25rem 0 0 0;
+  }
+  .evenement-detail-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+  }
+}
+@media only screen and (min-width: 1520px) {
+  .evenement-detail-content {
+    margin: 1.25rem 1.9rem 0 1.9rem;
+  }
+  .evenement-detail-content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-weight: 700;
+    color: #0D7EE5;
+  }
+  .evenement-detail-content h2, .evenement-detail-content p {
+    color: #fff;
+  }
+  .evenement-detail-content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1.25rem 0 0 0;
+  }
+  .evenement-detail-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+  }
+}
 .section h1 {
   color: #fff;
 }
@@ -945,6 +1004,12 @@ select {
   align-items: start;
   flex-direction: column;
 }
+.login-wrapper .login-container-form #loginForm p {
+  margin: 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: rgb(255, 72, 72);
+}
 .login-wrapper .login-container-form #loginForm label {
   font-size: 1.25rem;
   font-weight: 300;
@@ -1030,13 +1095,15 @@ select {
   margin: 1rem 0;
   font-size: 1.15rem;
   font-weight: 300;
+  text-decoration: underline;
+  color: #fff;
 }
 .login-wrapper .login-container #password-forgot a {
   color: #fff;
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
   .login-wrapper .login-container {
     margin: 3.15rem 0;
   }
@@ -1051,6 +1118,11 @@ select {
     justify-content: center;
     align-items: start;
     flex-direction: column;
+  }
+  .login-wrapper .login-container-form #loginForm p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 72, 72);
   }
   .login-wrapper .login-container-form #loginForm #password-forgot {
     font-size: 1.5rem;
@@ -1077,7 +1149,7 @@ select {
     box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
   .login-wrapper .login-container {
     margin: 3.15rem 0;
   }
@@ -1086,6 +1158,11 @@ select {
     font-weight: 500;
     color: #fff;
     margin: 0 0 0.65rem 0;
+  }
+  .login-wrapper .login-container-form p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 72, 72);
   }
   .login-wrapper .login-container-form #loginForm {
     display: flex;

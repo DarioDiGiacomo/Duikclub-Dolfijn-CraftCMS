@@ -79,7 +79,7 @@
 
 
 // Media Queries
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
     .duiken-banner {
         &-content {
             gap: 20px;
@@ -92,16 +92,17 @@
             }
             .bottom-text {             
                 a {
-                    @include paragraph_text(1.6rem);
+                    @include paragraph_text(1.5rem);
                     font-weight: 400;
                     color: $color-white;
+                    margin: 0 10px;
                 }
             }
         }
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
     .duiken-banner {
         &-content {
             gap: 30px;

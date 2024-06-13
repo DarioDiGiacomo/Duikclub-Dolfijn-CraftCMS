@@ -24,6 +24,12 @@
                 align-items: start;
                 flex-direction: column;
 
+                p {
+                    margin: 1rem 0;
+                    @include paragraph_text(1.15rem);
+                    color: rgb(255, 72, 72);
+                }
+
                 label {
                     @include paragraph_text(1.25rem);
                     color: $color-white;
@@ -124,6 +130,8 @@
         #password-forgot {
             margin: 1rem 0;
             @include paragraph_text(1.15rem);
+            text-decoration: underline;
+            color: $color-white;
 
             a {
                 color: $color-white;
@@ -134,7 +142,7 @@
 }
 
 // Media Queries
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
     .login-wrapper {
 
         .login-container {
@@ -152,6 +160,11 @@
                     justify-content: center;
                     align-items: start;
                     flex-direction: column;
+
+                    p {
+                        @include paragraph_text(1.5rem);
+                        color: rgb(255, 72, 72);
+                    }
 
                     #password-forgot {
                         @include paragraph_text(1.5rem);
@@ -183,7 +196,7 @@
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
     .login-wrapper {
 
         .login-container {
@@ -196,6 +209,11 @@
             }
 
             &-form {
+                p {
+                    @include paragraph_text(1.5rem);
+                    color: rgb(255, 72, 72);
+                }
+
                 #loginForm {
                     display: flex;
                     justify-content: center;

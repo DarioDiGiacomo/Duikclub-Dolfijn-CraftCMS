@@ -16,6 +16,7 @@
         background-image: url(../../template-duikclub/assets/images/animals/3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        cursor: pointer;
         z-index: 1001;
     }
 
@@ -335,10 +336,10 @@
 
 
 // Media Queries
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
     .standard-button {
         font-size: 1.25rem;
-        padding: 0.9rem 1.5rem;
+        padding: 0.9rem 1.25rem;
     }
 
     .navigation {
@@ -417,7 +418,7 @@
 
         &-social {
             i {
-                font-size: 1.9rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -428,10 +429,10 @@
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
     .standard-button {
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
+        font-size: 1.25rem;
+        padding: 0.9rem 1.25rem;
     }
 
     .navigation {
@@ -470,7 +471,7 @@
 
     .section {
         &-title {
-            @include title_text(2.6rem);
+            @include title_text(2.5rem);
             margin: 1.5rem 0 0 6.25rem;
         }
 
@@ -483,11 +484,11 @@
             width: calc(25% - 1.25rem);
 
             h1 {
-                @include title_text(2.25rem);
+                @include title_text(2rem);
             }
 
             p {
-                @include paragraph_text(1.6rem);
+                @include paragraph_text(1.25rem);
             }
         }
     }
@@ -495,7 +496,7 @@
     .footer {
         &-text {
             h2 {
-                @include title_text(2.5rem);
+                @include title_text(2rem);
                 font-weight: 700;
             }
         }
@@ -504,13 +505,13 @@
             margin: 1.25rem 0;
 
             a {
-                @include footer_text(1.5rem);
+                @include footer_text(1.25rem);
             }
         }
 
         &-social {
             i {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
 
@@ -518,14 +519,14 @@
             gap: 3.75rem;
 
             img {
-                width: 10%;
+                width: 9%;
 
                 &:nth-child(1) {
-                    width: 11%;
+                    width: 10%;
                 }
 
                 &:nth-child(3) {
-                    width: 6%;
+                    width: 5%;
                 }
             }
         }

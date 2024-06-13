@@ -25,3 +25,60 @@
         }
     }
 }
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
+    .evenement-detail {
+        &-content {
+            margin: 1.25rem 1.9rem 0 1.9rem;
+    
+            h1 {
+                @include title_text(2rem);
+                font-weight: 700;
+                color: $color-primary;
+            }
+    
+            h2, p {
+                color: $color-white;
+            }
+    
+            h2 {
+                @include title_text();
+                margin: 1.25rem 0 0 0;
+            }
+    
+            p {
+                @include paragraph_text();
+                margin: 0.5rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1520px) {
+    .evenement-detail {
+        &-content {
+            margin: 1.25rem 1.9rem 0 1.9rem;
+    
+            h1 {
+                @include title_text(3rem);
+                font-weight: 700;
+                color: $color-primary;
+            }
+    
+            h2, p {
+                color: $color-white;
+            }
+    
+            h2 {
+                @include title_text(2rem);
+                margin: 1.25rem 0 0 0;
+            }
+    
+            p {
+                @include paragraph_text(1.5rem);
+                margin: 0.5rem 0 0 0;
+            }
+        }
+    }
+}
