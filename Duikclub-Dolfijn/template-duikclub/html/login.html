@@ -25,7 +25,7 @@
     <div class="navigation">
         <div class="profile-picture"></div>
         <a href="#"><img src="../assets/images/logos/Dolfijn.png" alt="logo_dolfijn" class="logo"></a>
-        <div class="menu-icon" onclick="toggleMenu()">
+        <div class="menu-icon" id="menu-icon" onclick="toggleScroll()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="login-wrapper">
+    <div class="login-wrapper width-fix">
         <div class="login-container">
             <div class="login-container-content">
                 <h1>Login</h1>
@@ -57,6 +57,7 @@
                     <input type="password" id="password" name="password">
                     <label for="password-forgot"><a href="#" id="password-forgot">Wachtwoord vergeten?</a></label>
                     <button class="standard-button" type="submit">Login</button>
+                    <p>Ongeldige email of wachtwoord</p>
                 </form>
             </div>
         </div>

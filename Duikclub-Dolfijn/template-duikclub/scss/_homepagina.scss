@@ -76,7 +76,7 @@
 }
 
 // Media Queries
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
     .banner {
         &-text {
             margin-left: 3.75rem;
@@ -117,7 +117,7 @@
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
     .banner {
         &-text {
             margin: 0 0 4.4rem 6.25rem;
@@ -143,12 +143,12 @@
     .info {
         &-content {
             h1 {
-                @include title_text(2.6rem);
+                @include title_text(2.5rem);
                 margin: 1.55rem 0 0 6.25rem;
             }
             p {
                 width: 60%;
-                @include paragraph_text(2rem);
+                @include paragraph_text(1.5rem);
                 margin: 0.6rem 0 0 6.25rem;
             }
         }
