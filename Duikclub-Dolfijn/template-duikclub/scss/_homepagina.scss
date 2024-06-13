@@ -102,12 +102,12 @@
     .info {
         &-content {
             h1 {
-                @include title_text(36px);
+                @include title_text(2.25rem);
                 margin: 1.55rem 0 0 3.15rem;
             }
             p {
                 width: 60%;
-                @include paragraph_text(24px);
+                @include paragraph_text(1.5rem);
                 margin: 0.6rem 0 0 3.15rem;
             }
         }

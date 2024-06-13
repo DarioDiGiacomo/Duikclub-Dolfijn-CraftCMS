@@ -40,3 +40,14 @@ function unlockScroll() {
     document.body.style.paddingRight = '';
     document.body.classList.remove('no-scroll');
 }
+
+//Submenu
+function toggleSubmenu(event) {
+    event.preventDefault();
+    const submenu = document.getElementById('leden-submenu');
+    const leden = document.getElementById('leden-wrapper');
+    if (submenu) {
+        submenu.classList.toggle('active');
+        leden.classList.toggle('active');
+    }
+}

@@ -9,11 +9,20 @@
 //push year to the side
 .numInputWrapper {
     margin-left: 1.5rem;
+
+    .arrowUp::after, .arrowDown::after {
+        border-top-color: $color-white !important;
+        border-bottom-color: $color-white !important;
+    }
 }
 
 //days text color
 .flatpickr-day, .numInput, .today, .flatpickr-weekday {
     color: $color-white !important;
+}
+
+.flatpickr-day:hover {
+    color: black !important;
 }
 
 //months chevrons
@@ -47,6 +56,10 @@ select {
 .flatpickr-calendar {
     background-color: transparent !important; 
     box-shadow: none !important;
+
+    &::after {
+        display: none !important;
+    }
 }
 
 .flatpickr-input {
@@ -62,20 +75,108 @@ select {
     color: $color-black !important;
 }
 
-
 .wrapper-agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
     &-content {
-        width: 280px;
+        width: 100%;
+        max-width: 280px;
         margin: 20px auto;
 
-        h1, p, button {
+        button {
+            margin-top: 25px;
+            color: $color-white;
+        }
+
+        h1 {
             margin-top: 15px;
+            @include header_text(2.15rem);
+            color: $color-white;
+        }
+        p {
+            margin-top: 15px;
+            @include paragraph_text(1.15rem);
+            font-weight: 400;
             color: $color-white;
         }
 
         &-none {
             font-size: 1.5rem;
             display: none;
+        }
+    }
+}
+
+// Media Queries
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
+    .container-agenda {
+        margin: 10% auto;
+        transform: scale(1.5);
+    }
+
+    .wrapper-agenda {
+        &-content {
+            width: 100%;
+            max-width: 420px;
+            margin: 20px auto;
+    
+            button {
+                margin-top: 25px;
+                color: $color-white;
+            }
+    
+            h1 {
+                margin-top: 15px;
+                @include header_text(2.25rem);
+            }
+            p {
+                margin-top: 15px;
+                @include paragraph_text(1.5rem);
+                font-weight: 400;
+            }
+    
+            &-none {
+                font-size: 1.5rem;
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1520px) {
+    .container-agenda {
+        margin: 9% auto 7.5% auto;
+        transform: scale(1.8);
+    }
+
+    .wrapper-agenda {
+        &-content {
+            width: 100%;
+            max-width: 510px;
+            margin: 20px auto;
+    
+            button {
+                margin-top: 25px;
+                color: $color-white;
+            }
+    
+            h1 {
+                margin-top: 15px;
+                @include header_text(2.5rem);
+            }
+            p {
+                margin-top: 15px;
+                @include paragraph_text(1.5rem);
+                font-weight: 400;
+            }
+    
+            &-none {
+                font-size: 1.5rem;
+                display: none;
+            }
         }
     }
 }
