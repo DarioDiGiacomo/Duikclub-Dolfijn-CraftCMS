@@ -39,10 +39,10 @@
 
 						<button class="standard-button">Login</button>
 
-						{# {% if errorMessage is defined %}
-												{% set errorMessage = 'Ongeldige gebruikersnaam of wachtwoord' %}
+						{% if errorMessage is defined %}
+												{% set errorMessage = 'Ongeldige email of wachtwoord' %}
 													<p>{{ errorMessage }}</p>
-												{% endif %} #}
+												{% endif %}
 					</form>
 				</div>
 			{% else %}
