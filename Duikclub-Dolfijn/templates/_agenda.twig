@@ -80,6 +80,9 @@ function removeActivityDots() {
         },
         onReady: function(selectedDates, dateStr, instance) {
             addActivityDots(); // Voeg dots toe bij het laden van de kalender
+        }, 
+        onMonthChange: function(selectedDates, dateStr, instance) {
+            addActivityDots();
         }
     });
 
