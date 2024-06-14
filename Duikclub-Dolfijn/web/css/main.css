@@ -21,6 +21,17 @@ body {
   margin: auto;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0D7EE5;
+}
+
 .navigation {
   height: 8svh;
   min-width: 22.5rem;
@@ -766,11 +777,43 @@ body {
 }
 
 .flatpickr-day:hover {
+  background: #BFD3D9 !important;
+  border-color: #BFD3D9 !important;
   color: black !important;
+}
+
+.flatpickr-day:hover.today {
+  background: #012336 !important;
+  border-color: #012336 !important;
+  color: white !important;
 }
 
 .flatpickr-prev-month svg path, .flatpickr-next-month svg path {
   fill: #fff !important;
+}
+
+.flatpickr-day.has-activity::before {
+  content: "";
+  display: block;
+  width: 4px; /* Diameter van de dot */
+  height: 4px; /* Diameter van de dot */
+  background-color: #0D7EE5; /* Kleur van de dot */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px; /* Afstand tot de onderkant van de cel */
+  left: calc(50% - 2px); /* Centreren van de dot */
+}
+
+.flatpickr-day:hover.has-activity::before {
+  content: "";
+  display: block;
+  width: 4px; /* Diameter van de dot */
+  height: 4px; /* Diameter van de dot */
+  background-color: #012336; /* Kleur van de dot */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px; /* Afstand tot de onderkant van de cel */
+  left: calc(50% - 2px); /* Centreren van de dot */
 }
 
 select {
@@ -806,6 +849,8 @@ select {
 }
 
 .selected {
+  background: #0D7EE5 !important;
+  border-color: #0D7EE5 !important;
   color: #222222 !important;
 }
 

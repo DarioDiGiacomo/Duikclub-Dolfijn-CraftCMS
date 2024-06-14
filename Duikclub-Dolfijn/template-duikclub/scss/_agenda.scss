@@ -22,7 +22,14 @@
 }
 
 .flatpickr-day:hover {
+    background: $color-secondary !important;
+    border-color: $color-secondary !important;
     color: black !important;
+}
+.flatpickr-day:hover.today {
+    background: $color-accent !important;
+    border-color: $color-accent !important;
+    color: white !important;
 }
 
 //months chevrons
@@ -32,6 +39,29 @@
             fill: $color-white !important;
         }
     }
+}
+
+.flatpickr-day.has-activity::before {
+    content: '';
+    display: block;
+    width: 4px; /* Diameter van de dot */
+    height: 4px; /* Diameter van de dot */
+    background-color: $color-primary; /* Kleur van de dot */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px; /* Afstand tot de onderkant van de cel */
+    left: calc(50% - 2px); /* Centreren van de dot */
+}
+.flatpickr-day:hover.has-activity::before {
+    content: '';
+    display: block;
+    width: 4px; /* Diameter van de dot */
+    height: 4px; /* Diameter van de dot */
+    background-color: $color-accent; /* Kleur van de dot */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px; /* Afstand tot de onderkant van de cel */
+    left: calc(50% - 2px); /* Centreren van de dot */
 }
 
 select {
@@ -72,6 +102,8 @@ select {
 
 //selected day
 .selected {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
     color: $color-black !important;
 }
 

@@ -27,11 +27,11 @@
 						}) }}
 
 						{# <label class="remember">
-													{{ input('checkbox', 'rememberMe', '1', {
-														id: 'rememberMe',
-													}) }}
-													Herinner mij
-												</label> #}
+																			{{ input('checkbox', 'rememberMe', '1', {
+																				id: 'rememberMe',
+																			}) }}
+																			Herinner mij
+																		</label> #}
 
 						<p id="password-forgot">
 							<a href="{{ url('reset-password') }}">Wachtwoord vergeten?</a>
@@ -40,9 +40,9 @@
 						<button class="standard-button">Login</button>
 
 						{% if errorMessage is defined %}
-												{% set errorMessage = 'Ongeldige email of wachtwoord' %}
-													<p>{{ errorMessage }}</p>
-												{% endif %}
+							{% set errorMessage = 'Ongeldige email of wachtwoord' %}
+							<p>{{ errorMessage }}</p>
+						{% endif %}
 					</form>
 				</div>
 			{% else %}
