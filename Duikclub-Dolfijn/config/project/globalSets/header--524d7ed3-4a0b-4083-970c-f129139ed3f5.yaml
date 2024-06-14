@@ -23,5 +23,5 @@ fieldLayouts:
         uid: bb5223ac-c008-4dec-9f13-e6fb94895ff7
         userCondition: null
 handle: header
-name: Header
-sortOrder: 2
+name: Navigatie
+sortOrder: 1

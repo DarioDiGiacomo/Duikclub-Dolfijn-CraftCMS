@@ -1,0 +1,95 @@
+{% extends 'index' %}
+
+{% set pageTitle = entry.herotitle %}
+
+{% block content %}
+
+    <div class="container-agenda width-fix">
+        <div class="calendar" id="calendar"></div>
+    </div>
+
+    {% set selectedDate = craft.app.request.getQueryParam('selectedDate') %}
+
+    {% if selectedDate %}
+        {% set entries = craft.entries()
+            .section('Duiken')
+            .datum(['and', '>= ' ~ selectedDate ~ ' 00:00:00', '<= ' ~ selectedDate ~ ' 23:59:59'])
+            .all() %}
+
+        {% if entries|length %}
+            {% for entry in entries %}
+                <div class="wrapper-agenda-content">
+                    <h1>{{ entry.title }}</h1>
+                    <p>Locatie: {{ entry.duikTitle }}</p>
+                    <p>Tijd: {{ entry.beginUur | date("H:i") }}</p>
+                    {# <p>Inschrijvingen: {{ entry.registrationsFieldHandle }}</p> #}
+                    <button class="standard-button">Inschrijven</button>    
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="wrapper-agenda-content">
+                <h1>Er is geen activiteit voor deze dag ingepland!</h1>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="wrapper-agenda-content">
+            <h1>Selecteer een datum om activiteiten te bekijken.</h1>
+        </div>
+    {% endif %}
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    let calendar;
+
+    function addActivityDots() {
+        const activityDates = {{ craft.entries().section('Duiken').all()|map(entry => entry.datum.format('Y-m-d'))|json_encode|raw }};
+        const calendarDates = document.querySelectorAll('.flatpickr-day');
+        calendarDates.forEach(function(date) {
+            const dateString = date.getAttribute('aria-label');
+            const dateObj = new Date(dateString); // Maak een Date object van de string
+            const formattedDateString = dateObj.getFullYear() + '-' + ('0' + (dateObj.getMonth() + 1)).slice(-2) + '-' + ('0' + dateObj.getDate()).slice(-2); // Formatteer de datum naar "YYYY-MM-DD"
+            if (activityDates.includes(formattedDateString)) {
+                date.classList.add('has-activity');
+            }
+        });
+    }
+
+function removeActivityDots() {
+    const calendarDates = document.querySelectorAll('.flatpickr-day.has-activity');
+    calendarDates.forEach(function(date) {
+        if(date.classList.contains('selected')) {
+            date.classList.remove('has-activity');
+        }
+    });
+}
+
+    calendar = flatpickr("#calendar", {
+        inline: true,
+        dateFormat: "Y-m-d",
+        onChange: function (selectedDates, dateStr, instance) {
+            if (dateStr !== "{{ selectedDate|default('') }}") {
+                window.location.href = "?selectedDate=" + dateStr;
+            }
+            // Verwijder de dot van de geselecteerde datum
+            // Voeg dots opnieuw toe na het selecteren van een datum
+            addActivityDots();
+
+            removeActivityDots();
+
+        },
+        onReady: function(selectedDates, dateStr, instance) {
+            addActivityDots(); // Voeg dots toe bij het laden van de kalender
+        }
+    });
+
+    const initialDate = "{{ selectedDate|default('') }}";
+    if (initialDate) {
+        calendar.setDate(initialDate, true);
+    }
+});
+
+
+
+    </script>
+{% endblock %}

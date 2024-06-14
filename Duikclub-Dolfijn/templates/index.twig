@@ -18,6 +18,10 @@
 		<link
 		rel="stylesheet" href="{{siteUrl}}css/main.css">
 
+		<!-- Flatpickr -->
+		<link
+		rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 		<!-- Library's -->
 		<script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
 
@@ -53,14 +57,54 @@
 				<div class="line"></div>
 			</div>
 
+			{# <div id="menu-overlay">
+            <ul>
+                <li><a href="../html/duiken.html">Duiken</a></li>
+                <li><a href="#">Gallerij</a></li>
+                <li><a href="../html/evenementen.html">Evenementen</a></li>
+                <li id="leden-wrapper">
+                    <a href="#" id="leden-link" onclick="toggleSubmenu(event)">Leden <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                    <ul class="submenu" id="leden-submenu">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Ice lijst</a></li>
+                        <li><a href="#">Documenten</a></li>
+                        <li><a href="#">Boetiek</a></li>
+                        <li><a href="#">Clubreizen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Over ons</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div> #}
+
 			<div id="menu-overlay">
 				<ul>
-					{% for link in header.navlinks.all() %}
+					{% for link in header.navlinks.all()|slice(0, 3) %}
 						{% set destination = link.linkDestination.one() %}
 						<li>
 							<a href="{{ destination.url }}">{{ link.title }}</a>
 						</li>
 					{% endfor %}
+					{% for link in header.navlinks.all()|slice(3, 1) %}
+						{% set destination = link.linkDestination.one() %}
+						<li id="leden-wrapper">
+                    	<a href="{{ destination.url }}" id="leden-link" onclick="toggleSubmenu(event)">{{ link.title }} <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+					{% endfor %}
+                    <ul class="submenu" id="leden-submenu">
+					{% for link in ledenNavigatie.navlinks.all() %}
+						{% set destination = link.linkDestination.one() %}
+                        <li><a href="{{ destination.url }}">{{ link.title }}</a></li>
+					{% endfor %}
+					</ul>
+					</li>
+					{% for link in header.navlinks.all()|slice(4)%}
+						{% set destination = link.linkDestination.one() %}
+						<li>
+							<a href="{{ destination.url }}">{{ link.title }}</a>
+						</li>
+					{% endfor %}
+                    </ul>
+                </li>
 				</ul>
 			</div>
 		</div>
@@ -88,5 +132,9 @@
 			</div>
 			<p>@ copyright: Duikclub Dolfijn</p>
 		</footer>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="{{siteUrl}}scripts/calendar.js"></script>
 	</body>
 </html>

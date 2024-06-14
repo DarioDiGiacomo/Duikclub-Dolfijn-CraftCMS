@@ -32,6 +32,18 @@ body {
     margin: auto;
 }
 
+::-webkit-scrollbar {
+    width: .5rem;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+
+}
+
 @mixin header_text($font-size: 3rem) {
     font-size: $font-size;
     font-weight: 700;

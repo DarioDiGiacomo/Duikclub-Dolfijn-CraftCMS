@@ -1,4 +1,4 @@
-dateModified: 1718284420
+dateModified: 1718376216
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -20,6 +20,7 @@ meta:
     8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: Page # Page
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
     9c85eda4-2574-4951-a105-69258ccd401e: Evenementen # Evenementen
+    17c5ed3f-8535-4707-a066-e0c33d9807f4: Agenda # Agenda
     19c956a5-7736-4514-8628-bfe619462e64: login # login
     33a1b96b-d11a-4eba-a9df-06667936e05e: evenementen # evenementen
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
@@ -30,7 +31,7 @@ meta:
     97f6ef56-6d55-41c8-a43f-04ec062224ff: 'Event Price' # Event Price
     98cf5e85-dfb5-4bdb-a863-fea510a9f1f3: 'Link Destination' # Link Destination
     381d2c41-f5ea-4233-b15f-6e0872931101: 'Evenementen Title' # Evenementen Title
-    524d7ed3-4a0b-4083-970c-f129139ed3f5: Header # Header
+    524d7ed3-4a0b-4083-970c-f129139ed3f5: Navigatie # Navigatie
     6874a386-bc56-486c-8bf3-c4c3786ca273: brevetten # brevetten
     6929f2ae-460d-44dc-8048-f59ca60bf924: 'Contact Form' # Contact Form
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
@@ -55,6 +56,7 @@ meta:
     f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
     f281ce47-179e-4fed-ae32-f348a72e2505: Gallerij # Gallerij
+    f1627a70-4cbd-4b93-8506-9d58f00c78b6: 'Leden Navigatie' # Leden Navigatie
     f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
     f9416568-3aa1-4e2e-b9b3-38dc72accc88: Tags # Tags
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur
