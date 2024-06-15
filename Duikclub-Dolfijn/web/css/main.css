@@ -716,6 +716,29 @@ body {
   justify-content: flex-end;
 }
 
+.section-wrapper-block {
+  margin: 0.5rem 0;
+}
+.section-wrapper-block .title-block {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-weight: bold;
+}
+.section-wrapper-block p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-weight: 400;
+  text-align: start;
+  color: #fff;
+}
+.section-wrapper-block .price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0D7EE5;
+  margin: 0.75rem 0 0.4rem 0;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1519px) {
   .duiken-banner-content {
     gap: 20px;
@@ -734,6 +757,28 @@ body {
     font-weight: 400;
     color: #fff;
     margin: 0 10px;
+  }
+  .section-wrapper-block {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-block .title-block {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-weight: bold;
+  }
+  .section-wrapper-block p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-weight: 400;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-block .price {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
   }
 }
 @media only screen and (min-width: 1520px) {
@@ -757,6 +802,28 @@ body {
     font-weight: 300;
     font-weight: 400;
     color: #fff;
+  }
+  .section-wrapper-block {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-block .title-block {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    font-weight: bold;
+  }
+  .section-wrapper-block p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-weight: 400;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-block .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
   }
 }
 .container-agenda {

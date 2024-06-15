@@ -77,6 +77,30 @@
     }
 }
 
+//Price
+.section-wrapper-block {
+    margin: 0.5rem 0;
+
+    .title-block {
+        @include header_text(1.5rem);
+        color: $color-white;
+        font-weight: bold;
+    }
+
+    p {
+        @include paragraph_text(0.9rem);
+        font-weight: 400;
+        text-align: start;
+        color: $color-white;
+    }
+
+    .price {
+        @include header_text(1.15rem);
+        color: $color-primary;
+        margin: 0.75rem 0 0.4rem 0;
+    }
+}
+
 
 // Media Queries
 @media only screen and (min-width: 768px) and (max-width: 1519px) {
@@ -98,6 +122,29 @@
                     margin: 0 10px;
                 }
             }
+        }
+    }
+
+    .section-wrapper-block {
+        margin: 0.5rem 0;
+    
+        .title-block {
+            @include header_text(2.5rem);
+            color: $color-white;
+            font-weight: bold;
+        }
+    
+        p {
+            @include paragraph_text(1.5rem);
+            font-weight: 400;
+            text-align: start;
+            color: $color-white;
+        }
+    
+        .price {
+            @include header_text(1.85rem);
+            color: $color-primary;
+            margin: 0.75rem 0 0.4rem 0;
         }
     }
 }
@@ -122,6 +169,29 @@
                     color: $color-white;
                 }
             }
+        }
+    }
+
+    .section-wrapper-block {
+        margin: 0.5rem 0;
+    
+        .title-block {
+            @include header_text(3rem);
+            color: $color-white;
+            font-weight: bold;
+        }
+    
+        p {
+            @include paragraph_text(1.5rem);
+            font-weight: 400;
+            text-align: start;
+            color: $color-white;
+        }
+    
+        .price {
+            @include header_text(2rem);
+            color: $color-primary;
+            margin: 0.75rem 0 0.4rem 0;
         }
     }
 }
