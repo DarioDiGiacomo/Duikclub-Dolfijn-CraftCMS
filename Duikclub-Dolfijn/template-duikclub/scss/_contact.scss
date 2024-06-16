@@ -1,0 +1,126 @@
+@use 'base' as *;
+
+.section {
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1 {
+            @include header_text(2.15rem);
+            color: $color-primary;
+        }
+
+        p {
+            @include paragraph_text(.9rem);
+            width: 60%;
+            text-align: center;
+            color: $color-white;
+        }
+    }
+}
+
+
+.fui-i {
+    width: 90%;
+    margin: 0 auto !important;
+}
+
+.fui-btn {
+    width: 100%;
+}
+
+.fui-submit {
+    appearance: none !important;
+    background-color: $color-primary !important;
+    border: 1px solid rgba(58, 74, 90, 0.15) !important;
+    border-radius: 6px !important;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0 !important;
+    box-sizing: border-box !important;
+    color: $color-white !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.25rem !important;
+    padding: 0.6rem 1.15rem !important;
+}
+
+.fui-label {
+    font-size: 1.25rem !important;
+    color: $color-white !important;
+    margin: 1rem 0 0;
+}
+
+.fui-input {
+    background-color: transparent !important;
+    font-size: 1rem !important;
+    padding: 0.65rem !important;
+    border: 1px solid $color-white;
+    border-radius: 6px;
+}
+
+textarea.fui-input {
+    height: 10rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
+
+    .section {
+        &-content {
+            gap: 0;
+            margin: 2rem 0;
+
+            h1 {
+            @include header_text(4.4rem);
+            }
+
+            p {
+                @include paragraph_text(1.75rem);
+                width: 50%;
+            }
+        }
+    }
+    
+
+    .fui-i {
+        width: 80%;
+    }
+
+    .fui-label {
+        font-size: 1.75rem !important;
+    }
+    .fui-input {
+        font-size: 1.5rem !important;
+    }
+
+    .fui-submit {
+        font-size: 1.25rem !important;
+        padding: 0.9rem 1.25rem !important;
+
+    }
+
+}
+
+@media only screen and (min-width: 1520px) {
+
+    .section {
+        &-content {
+            gap: 0;
+            margin: 2rem 0;
+
+            h1 {
+                @include header_text(5rem);
+            }
+
+            p {
+                @include paragraph_text(1.75rem);
+                width: 40%;
+            }
+        }
+    }
+
+    .fui-i {
+        width: 50%;
+    }
+}

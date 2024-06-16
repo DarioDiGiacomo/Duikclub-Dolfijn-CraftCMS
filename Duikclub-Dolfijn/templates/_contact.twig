@@ -1,0 +1,21 @@
+{% extends 'index' %}
+
+{% set pageTitle = entry.title %}
+
+{% block content %}
+
+	<div class="section width-fix">
+
+		<div class="section-content">
+			<h1>Contacteer ons</h1>
+            <p>Leren duiken of gewoon zin om eens een berichtje te sturen? Geef ons een sein!</p>
+		</div>
+
+		{% set form = entry.formulier.one() %}
+		{% if form %}
+			{{ craft.formie.renderForm(form)}}
+		{% else %}
+			<p>Er is geen formulier beschikbaar voor deze pagina.</p>
+		{% endif %}
+	</div>
+{% endblock %}

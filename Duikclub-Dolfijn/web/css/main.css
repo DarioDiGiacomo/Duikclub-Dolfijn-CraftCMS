@@ -91,8 +91,10 @@ body {
   justify-content: center;
   border: 2px solid transparent;
   margin: 0;
+  transition: padding 0.2s ease-in-out;
 }
 .navigation #menu-overlay ul #leden-wrapper.active {
+  transition: padding 0.2s ease-in-out;
   border: 2px solid #0D7EE5;
   padding: 1.5rem 2rem;
   border-radius: 1%;
@@ -1141,13 +1143,13 @@ select {
   place-content: center;
   place-items: center;
   display: grid;
-  gap: 2.5rem;
-  padding: 2.5rem;
+  gap: 2rem;
+  padding: 2rem;
   grid-template-columns: repeat(1, 1fr);
 }
 .section-gallerywrapper-item {
   transition: 0.2s ease-in-out;
-  width: 80%;
+  width: 100%;
 }
 .section-gallerywrapper-item img {
   width: 100%;
@@ -1171,22 +1173,25 @@ select {
   gap: 1.25rem;
 }
 .section-filter-button {
-  margin: 1rem 4rem;
+  margin: 1rem 2rem 0;
 }
 .section-filter-active {
   transform: translateX(0);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1365px) {
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
   .section-filter {
     width: 100%;
-    margin: 1rem 4rem;
     overflow-x: inherit;
   }
+  .section-filter-button {
+    margin: 1rem 3.15rem;
+  }
   .section-gallerywrapper {
+    padding: 2rem 3.15rem;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
   }
   .section-gallerywrapper-item {
     width: 100%;
@@ -1197,18 +1202,19 @@ select {
     display: block;
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1520px) {
   .section-filter {
     overflow-x: inherit;
     width: 25%;
   }
+  .section-filter-button {
+    margin: 1rem 6.25rem;
+  }
   .section-gallerywrapper {
-    margin: 1.25rem 0;
     place-content: center;
     place-items: center;
     display: grid;
-    gap: 2.5rem;
-    padding: 2.5rem;
+    padding: 2rem 6.25rem;
     grid-template-columns: repeat(4, 1fr);
   }
   .section-gallerywrapper-item {
@@ -1439,6 +1445,113 @@ select {
     border-color: #0D7EE5;
     outline: none;
     box-shadow: 0 0 0.65rem rgba(71, 160, 255, 0.5);
+  }
+}
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section-content h1 {
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #0D7EE5;
+}
+.section-content p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+  color: #fff;
+}
+
+.fui-i {
+  width: 90%;
+  margin: 0 auto !important;
+}
+
+.fui-btn {
+  width: 100%;
+}
+
+.fui-submit {
+  appearance: none !important;
+  background-color: #0D7EE5 !important;
+  border: 1px solid rgba(58, 74, 90, 0.15) !important;
+  border-radius: 6px !important;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0 !important;
+  box-sizing: border-box !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.25rem !important;
+  padding: 0.6rem 1.15rem !important;
+}
+
+.fui-label {
+  font-size: 1.25rem !important;
+  color: #fff !important;
+  margin: 1rem 0 0;
+}
+
+.fui-input {
+  background-color: transparent !important;
+  font-size: 1rem !important;
+  padding: 0.65rem !important;
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+
+textarea.fui-input {
+  height: 10rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1519px) {
+  .section-content {
+    gap: 0;
+    margin: 2rem 0;
+  }
+  .section-content h1 {
+    font-size: 4.4rem;
+    font-weight: 700;
+  }
+  .section-content p {
+    font-size: 1.75rem;
+    font-weight: 300;
+    width: 50%;
+  }
+  .fui-i {
+    width: 80%;
+  }
+  .fui-label {
+    font-size: 1.75rem !important;
+  }
+  .fui-input {
+    font-size: 1.5rem !important;
+  }
+  .fui-submit {
+    font-size: 1.25rem !important;
+    padding: 0.9rem 1.25rem !important;
+  }
+}
+@media only screen and (min-width: 1520px) {
+  .section-content {
+    gap: 0;
+    margin: 2rem 0;
+  }
+  .section-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .section-content p {
+    font-size: 1.75rem;
+    font-weight: 300;
+    width: 40%;
+  }
+  .fui-i {
+    width: 50%;
   }
 }
 

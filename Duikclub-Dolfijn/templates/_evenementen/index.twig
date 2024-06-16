@@ -1,26 +1,28 @@
 {% extends 'index' %}
 
-{% set image = home.image.one()  %}
+{% set images = entry.images.all()  %}
+{% set randomIndex = random(0, images|length - 1) %}
+{% set randomImage = images[randomIndex] %}
 
 {% set pageTitle = entry.herotitle %}
 
 {% block content %}
 
-<div class="centered-banner">
-        <img src="{{image.url}}" alt="banner_home">
-        <div class="centered-banner-content">
-            <h1>{{pageTitle}}</h1>
-        </div>
-    </div> 
+	<div class="centered-banner">
+		<img src="{{randomImage.url}}" alt="banner_home">
+		<div class="centered-banner-content">
+			<h1>{{pageTitle}}</h1>
+		</div>
+	</div>
 
-    <div class="section">
-        <div class="section-wrapper">
-            
-        {% for evenement in craft.entries.section('evenementen').all() %}
-			{% include "snippets/_card.twig" with { card: evenement, evenement: true } %}
-		{% endfor %}
-            
-        </div>    
-    </div>
+	<div class="section width-fix">
+		<div class="section-wrapper">
+
+			{% for evenement in craft.entries.section('evenementen').all() %}
+				{% include "snippets/_card.twig" with { card: evenement, evenement: true } %}
+			{% endfor %}
+
+		</div>
+	</div>
 
 {% endblock %}

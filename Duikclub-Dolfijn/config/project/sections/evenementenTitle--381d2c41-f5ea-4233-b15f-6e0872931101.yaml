@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b # Page
+  - 8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b # Page Met Image
 handle: evenementenTitle
 maxAuthors: 1
 name: 'Evenementen Title'

@@ -1,4 +1,4 @@
-dateModified: 1718376216
+dateModified: 1718526715
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -17,9 +17,10 @@ meta:
     3f5bba28-6c17-495e-ba00-f8ba434e02b4: 'Public Schema' # Public Schema
     7a8cea59-b761-47c7-bd4e-6c20b48a95f4: 'Brevet Details' # Brevet Details
     7f805254-7b80-475d-b90a-bf9948eb4e08: 'Gallerij Title' # Gallerij Title
-    8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: Page # Page
+    8cc9e9a5-d71e-4aac-876d-0e7d4f24b83b: 'Page Met Image' # Page Met Image
     8e6a3918-065e-4dd9-a1cf-b7d9b7579e7d: Duiken # Duiken
     9c85eda4-2574-4951-a105-69258ccd401e: Evenementen # Evenementen
+    16f08275-87ec-45d9-b8ba-3e84c813f040: Contact # Contact
     17c5ed3f-8535-4707-a066-e0c33d9807f4: Agenda # Agenda
     19c956a5-7736-4514-8628-bfe619462e64: login # login
     33a1b96b-d11a-4eba-a9df-06667936e05e: evenementen # evenementen
@@ -32,6 +33,7 @@ meta:
     98cf5e85-dfb5-4bdb-a863-fea510a9f1f3: 'Link Destination' # Link Destination
     381d2c41-f5ea-4233-b15f-6e0872931101: 'Evenementen Title' # Evenementen Title
     524d7ed3-4a0b-4083-970c-f129139ed3f5: Navigatie # Navigatie
+    2597aab7-1377-44de-bca2-ba1e6b9b2113: Page # Page
     6874a386-bc56-486c-8bf3-c4c3786ca273: brevetten # brevetten
     6929f2ae-460d-44dc-8048-f59ca60bf924: 'Contact Form' # Contact Form
     7786cb79-72dd-4b41-8d23-cab5a1b4febf: Home # Home
@@ -52,11 +54,13 @@ meta:
     d72d7795-44ab-404d-9827-b8f195919d3b: Image # Image
     d96e4b92-8d9a-46b1-9c8c-42d23f4318ca: New # New
     db3a5384-72e7-41bd-9a3e-73c0c097b964: 'Begin Uur' # Begin Uur
+    dde969b7-31d9-4d7c-b2b0-c5ddd0aa5bb5: Formulier # Formulier
     eeec348a-f847-40b5-b2d4-c1c27a1a6c48: Duiken # Duiken
     f3ee58ad-a28f-4579-8df3-2718c1a7d437: 'User Pictures' # User Pictures
     f47a425f-ef1d-40ce-9674-1a0c7e59a56b: Datum # Datum
     f281ce47-179e-4fed-ae32-f348a72e2505: Gallerij # Gallerij
     f1627a70-4cbd-4b93-8506-9d58f00c78b6: 'Leden Navigatie' # Leden Navigatie
+    f4216c6f-2851-4de9-8d84-26953fce9088: Contact # Contact
     f263234d-f7ec-401f-a32a-98b006d5cbc1: 'Duik Informatie' # Duik Informatie
     f9416568-3aa1-4e2e-b9b3-38dc72accc88: Tags # Tags
     fb125a24-cfc8-4055-b270-9a13e3c0cfe4: 'Eind Uur' # Eind Uur

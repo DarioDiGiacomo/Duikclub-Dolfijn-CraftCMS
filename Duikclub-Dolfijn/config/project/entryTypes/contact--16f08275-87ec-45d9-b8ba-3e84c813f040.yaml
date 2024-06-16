@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  407acff7-f612-4564-9c61-e7b448860174:
+  0a07b7d5-2af9-4c25-b0be-0061064469c7:
     tabs:
       -
         elementCondition: null
@@ -30,36 +30,36 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 7388fc99-2cd1-41ae-af38-ded5718a568f
+            uid: 6c1c40bc-08ce-4e94-bb88-dc6daa1e79a2
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
+            fieldUid: dde969b7-31d9-4d7c-b2b0-c5ddd0aa5bb5 # Formulier
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0d0844ca-ed34-4371-85bc-813f8f76971d
+            uid: 680af9db-08b9-483d-b83d-61631e7f5cc8
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 01e0a89d-89f9-47e0-9328-518178d983df
+        uid: f57928a8-5b7b-45f4-a5e9-2e4ec0aa0dc8
         userCondition: null
-handle: page
-hasTitleField: false
-icon: paperclip
-name: Page
+handle: contact
+hasTitleField: true
+icon: at
+name: Contact
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{section.name|raw}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
