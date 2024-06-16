@@ -63,6 +63,7 @@
     }
 }
 
+//Opleidingen
 .opleiding-card {
     overflow: hidden;
 
@@ -77,19 +78,17 @@
     }
 }
 
-//Price
-.section-wrapper-block {
+//Prijs
+.section-wrapper-price {
     margin: 0.5rem 0;
 
     .title-block {
-        @include header_text(1.5rem);
+        @include title_text(1.5rem);
         color: $color-white;
-        font-weight: bold;
     }
 
     p {
         @include paragraph_text(0.9rem);
-        font-weight: 400;
         text-align: start;
         color: $color-white;
     }
@@ -98,6 +97,70 @@
         @include header_text(1.15rem);
         color: $color-primary;
         margin: 0.75rem 0 0.4rem 0;
+    }
+}
+
+//Initiatie
+.section-wrapper-initiatie {
+    margin: 0.5rem 0;
+
+    .title-initiatie {
+        @include title_text(1.5rem);
+        color: $color-white;
+    }
+
+    p {
+        @include paragraph_text(0.9rem);
+        text-align: start;
+        color: $color-white;
+    }
+
+    .time-initiatie {
+        @include header_text(1.15rem);
+        color: $color-primary;
+        margin: 0.75rem 0 0.4rem 0;
+    }
+
+    h4 {
+        @include title_text(1.25rem);
+        text-align: start;
+        color: $color-white;
+        margin: 1rem 0 0.5rem 0;
+    }
+}
+
+//Duikplaatsen
+.section-wrapper-duikplaatsen {
+    margin: 0.5rem 0;
+
+    .title-duikplaatsen {
+        @include title_text(1.5rem);
+        color: $color-white;
+    }
+
+    .duik-wrapper {
+        .title-duik {
+            @include header_text(1.15rem);
+            color: $color-primary;
+            margin: 0.75rem 0 0.4rem 0;
+        }
+
+        ul {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        li {
+            @include paragraph_text(0.9rem);
+            text-align: start;
+            color: $color-white;
+        }
+        
+        p {
+            @include paragraph_text(0.9rem);
+            text-align: start;
+            color: $color-white;
+        }
     }
 }
 
@@ -125,18 +188,16 @@
         }
     }
 
-    .section-wrapper-block {
+    .section-wrapper-price {
         margin: 0.5rem 0;
     
         .title-block {
-            @include header_text(2.5rem);
+            @include title_text(2.5rem);
             color: $color-white;
-            font-weight: bold;
         }
     
         p {
             @include paragraph_text(1.5rem);
-            font-weight: 400;
             text-align: start;
             color: $color-white;
         }
@@ -145,6 +206,67 @@
             @include header_text(1.85rem);
             color: $color-primary;
             margin: 0.75rem 0 0.4rem 0;
+        }
+    }
+
+    .section-wrapper-initiatie {
+        margin: 0.5rem 0;
+    
+        .title-initiatie {
+            @include title_text(2.5rem);
+            color: $color-white;
+        }
+    
+        p {
+            @include paragraph_text(1.5rem);
+            text-align: start;
+            color: $color-white;
+        }
+    
+        .time-initiatie {
+            @include header_text(1.85rem);
+            color: $color-primary;
+            margin: 0.75rem 0 0.4rem 0;
+        }
+    
+        h4 {
+            @include title_text(2rem);
+            text-align: start;
+            color: $color-white;
+        }
+    }
+
+    .section-wrapper-duikplaatsen {
+        margin: 0.5rem 0;
+    
+        .title-duikplaatsen {
+            @include title_text(2.5rem);
+            color: $color-white;
+        }
+    
+        .duik-wrapper {
+            .title-duik {
+                @include header_text(1.85rem);
+                color: $color-primary;
+                margin: 0.75rem 0 0.4rem 0;
+            }
+    
+            ul {
+                list-style: none;
+                text-decoration: none;
+            }
+    
+            li {
+                @include paragraph_text(1.5rem);
+                text-align: start;
+                color: $color-white;
+            }
+            
+            p {
+                @include paragraph_text(1.5rem);
+                text-align: start;
+                color: $color-white;
+            }
         }
     }
 }
@@ -172,18 +294,16 @@
         }
     }
 
-    .section-wrapper-block {
+    .section-wrapper-price {
         margin: 0.5rem 0;
     
         .title-block {
-            @include header_text(3rem);
+            @include title_text(3rem);
             color: $color-white;
-            font-weight: bold;
         }
     
         p {
             @include paragraph_text(1.5rem);
-            font-weight: 400;
             text-align: start;
             color: $color-white;
         }
@@ -192,6 +312,67 @@
             @include header_text(2rem);
             color: $color-primary;
             margin: 0.75rem 0 0.4rem 0;
+        }
+    }
+
+    .section-wrapper-initiatie {
+        margin: 0.5rem 0;
+    
+        .title-initiatie {
+            @include title_text(3rem);
+            color: $color-white;
+        }
+    
+        p {
+            @include paragraph_text(1.5rem);
+            text-align: start;
+            color: $color-white;
+        }
+    
+        .time-initiatie {
+            @include header_text(2rem);
+            color: $color-primary;
+            margin: 0.75rem 0 0.4rem 0;
+        }
+    
+        h4 {
+            @include title_text(2.25rem);
+            text-align: start;
+            color: $color-white;
+        }
+    }
+
+    .section-wrapper-duikplaatsen {
+        margin: 0.5rem 0;
+    
+        .title-duikplaatsen {
+            @include title_text(3rem);
+            color: $color-white;
+        }
+    
+        .duik-wrapper {
+            .title-duik {
+                @include header_text(2rem);
+                color: $color-primary;
+                margin: 0.75rem 0 0.4rem 0;
+            }
+    
+            ul {
+                list-style: none;
+                text-decoration: none;
+            }
+    
+            li {
+                @include paragraph_text(1.5rem);
+                text-align: start;
+                color: $color-white;
+            }
+            
+            p {
+                @include paragraph_text(1.5rem);
+                text-align: start;
+                color: $color-white;
+            }
         }
     }
 }
