@@ -42,7 +42,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5f1fff2e-390f-45a5-97a8-d1dc739a890d
@@ -57,7 +57,7 @@ fieldLayouts:
             instructions: null
             label: HeroTagline
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 03d9cec9-3652-4fbf-81bd-bbc50bf58a02
@@ -77,7 +77,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 41e269fd-fa0f-4794-a59e-4f80bc7e9bb6
@@ -92,7 +92,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0f1058fa-28dc-420e-9db5-7acf19c9a665
@@ -113,7 +113,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e3845c18-a16e-4df6-b667-cec38bff2d29

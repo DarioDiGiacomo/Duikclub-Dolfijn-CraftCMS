@@ -42,7 +42,7 @@ fieldLayouts:
             instructions: null
             label: 'Duik Title'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9b5cad12-ae8e-4745-8ff2-ec44e754ee7b
@@ -56,33 +56,13 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: d72d7795-44ab-404d-9827-b8f195919d3b # Image
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3618a8f3-026b-49cd-ae53-6ae8ad4fedb1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            type: craft\fieldlayoutelements\LineBreak
-            uid: 0bb2dd0f-2b45-486b-ba8c-472b4906f2d4
-            userCondition: null
-          -
-            elementCondition: null
             fieldUid: f47a425f-ef1d-40ce-9674-1a0c7e59a56b # Datum
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8cf948c6-05f2-46a9-a54b-f1a55afec27f
@@ -97,7 +77,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 33825e51-7c7c-4163-84bc-ef00324e7537
@@ -112,7 +92,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 23cd1297-e522-4449-95d2-2ba98080dfbe

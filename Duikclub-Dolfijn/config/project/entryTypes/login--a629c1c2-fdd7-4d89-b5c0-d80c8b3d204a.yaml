@@ -34,17 +34,32 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3a1ee9a-5d10-40a8-b652-ed4caf816e22
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 742da27f-f15d-4bab-ad0c-511f903f96b5
         userCondition: null
 handle: login
-hasTitleField: true
+hasTitleField: false
 icon: fingerprint
 name: Login
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -2,7 +2,6 @@
 
 {% set pageTitle = entry.title %}
 
-
 {% set bannerimage = entry.image.one()  %}
 {% set duikInformatie = craft.entries.section('duikinformatie').all() %}
 
@@ -13,13 +12,12 @@
 			<img src="{{ bannerimage.url }}" alt="{{ image.title }}">
 			<div class="duiken-banner-content">
 				<h1>{{ entry.title }}</h1>
-				<p>Ben je benieuwd naar de verschillende opleidingen binnen duiken en welke brevetten er te behalen zijn?</p>
-
+					<p>{{entry.description}}</p>
 				<div class="bottom-text">
 					{% for link in duikInformatieNav.navlinks.all() %}
 						{% set destination = link.linkDestination.one() %}
 						{% set isActive = entry.title == link.title %}
-						
+
 						<a href="{{ destination.url }}" class="rotate-link {% if isActive %}active-link{% endif %}" data-content="content{{ loop.index }}">{{ link.title }}</a>
 					{% endfor %}
 				</div>
@@ -29,7 +27,7 @@
 		{% for link in duikInformatieNav.navlinks.all() %}
 			{% set destination = link.linkDestination.one() %}
 			{% if entry.title == link.title %}
-                {% include "snippets/_" ~ entry.title ~ ".twig" %}
+				{% include "snippets/_" ~ entry.title ~ ".twig" %}
 			{% endif %}
 		{% endfor %}
 	</div>

@@ -1,4 +1,4 @@
-dateModified: 1718526715
+dateModified: 1718548661
 email:
   fromEmail: Dario.DiGiacomo@student.pxl.be
   fromName: 'Duikclub Dolfijn'
@@ -23,6 +23,7 @@ meta:
     16f08275-87ec-45d9-b8ba-3e84c813f040: Contact # Contact
     17c5ed3f-8535-4707-a066-e0c33d9807f4: Agenda # Agenda
     19c956a5-7736-4514-8628-bfe619462e64: login # login
+    21b37d30-09cf-4c46-8f63-88e670aa6c91: Description # Description
     33a1b96b-d11a-4eba-a9df-06667936e05e: evenementen # evenementen
     47bec586-931e-4fb9-ae84-2b33e28cee23: Home # Home
     52a0697a-56b1-4445-891c-0cd70e4df0e8: 'Brevet Description' # Brevet Description
