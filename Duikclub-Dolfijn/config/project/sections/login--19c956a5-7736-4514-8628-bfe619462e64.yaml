@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - a629c1c2-fdd7-4d89-b5c0-d80c8b3d204a # Login
+  - 2597aab7-1377-44de-bca2-ba1e6b9b2113 # Page
 handle: login
 maxAuthors: 1
 name: login

@@ -36,6 +36,21 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 10008e6f-6ccb-4b28-9969-670eafdd8963 # HeroTitle
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3dd8034a-1be5-43de-ad4e-f448b99e479c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: dde969b7-31d9-4d7c-b2b0-c5ddd0aa5bb5 # Formulier
             handle: null
             includeInCards: false
@@ -53,13 +68,13 @@ fieldLayouts:
         uid: f57928a8-5b7b-45f4-a5e9-2e4ec0aa0dc8
         userCondition: null
 handle: contact
-hasTitleField: true
+hasTitleField: false
 icon: at
 name: Contact
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

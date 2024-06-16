@@ -1,7 +1,6 @@
-<div class="section width-fix">
-	<h1 class="section-title">Opleidingen & Brevetten</h1>
-	<div class="section-wrapper">
-		{% for brevetten in craft.entries.section('brevetten').all() %}
-			{% include "snippets/_card.twig" with { card: brevetten, brevetten: true } %}
-		{% endfor %}
-	</div>
+<h1 class="section-title">Opleidingen & Brevetten</h1>
+<div class="section-wrapper">
+	{% for brevetten in craft.entries.section('brevetten').all() %}
+		{% include "snippets/_card.twig" with { card: brevetten, brevetten: true } %}
+	{% endfor %}
+</div>
