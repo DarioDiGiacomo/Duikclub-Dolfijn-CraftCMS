@@ -718,27 +718,84 @@ body {
   justify-content: flex-end;
 }
 
-.section-wrapper-block {
+.section-wrapper-price {
   margin: 0.5rem 0;
 }
-.section-wrapper-block .title-block {
+.section-wrapper-price .title-block {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
-  font-weight: bold;
 }
-.section-wrapper-block p {
+.section-wrapper-price p {
   font-size: 0.9rem;
   font-weight: 300;
-  font-weight: 400;
   text-align: start;
   color: #fff;
 }
-.section-wrapper-block .price {
+.section-wrapper-price .price {
   font-size: 1.15rem;
   font-weight: 700;
   color: #0D7EE5;
   margin: 0.75rem 0 0.4rem 0;
+}
+
+.section-wrapper-initiatie {
+  margin: 0.5rem 0;
+}
+.section-wrapper-initiatie .title-initiatie {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+.section-wrapper-initiatie p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: start;
+  color: #fff;
+}
+.section-wrapper-initiatie .time-initiatie {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0D7EE5;
+  margin: 0.75rem 0 0.4rem 0;
+}
+.section-wrapper-initiatie h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: start;
+  color: #fff;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.section-wrapper-duikplaatsen {
+  margin: 0.5rem 0;
+}
+.section-wrapper-duikplaatsen .title-duikplaatsen {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+.section-wrapper-duikplaatsen .duik-wrapper .title-duik {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0D7EE5;
+  margin: 0.75rem 0 0.4rem 0;
+}
+.section-wrapper-duikplaatsen .duik-wrapper ul {
+  list-style: none;
+  text-decoration: none;
+}
+.section-wrapper-duikplaatsen .duik-wrapper li {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: start;
+  color: #fff;
+}
+.section-wrapper-duikplaatsen .duik-wrapper p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: start;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1519px) {
@@ -760,27 +817,81 @@ body {
     color: #fff;
     margin: 0 10px;
   }
-  .section-wrapper-block {
+  .section-wrapper-price {
     margin: 0.5rem 0;
   }
-  .section-wrapper-block .title-block {
+  .section-wrapper-price .title-block {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
-    font-weight: bold;
   }
-  .section-wrapper-block p {
+  .section-wrapper-price p {
     font-size: 1.5rem;
     font-weight: 300;
-    font-weight: 400;
     text-align: start;
     color: #fff;
   }
-  .section-wrapper-block .price {
+  .section-wrapper-price .price {
     font-size: 1.85rem;
     font-weight: 700;
     color: #0D7EE5;
     margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-initiatie {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-initiatie .title-initiatie {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .section-wrapper-initiatie p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-initiatie .time-initiatie {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-initiatie h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-duikplaatsen .title-duikplaatsen {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper .title-duik {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper ul {
+    list-style: none;
+    text-decoration: none;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper li {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
   }
 }
 @media only screen and (min-width: 1520px) {
@@ -805,27 +916,81 @@ body {
     font-weight: 400;
     color: #fff;
   }
-  .section-wrapper-block {
+  .section-wrapper-price {
     margin: 0.5rem 0;
   }
-  .section-wrapper-block .title-block {
+  .section-wrapper-price .title-block {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
-    font-weight: bold;
   }
-  .section-wrapper-block p {
+  .section-wrapper-price p {
     font-size: 1.5rem;
     font-weight: 300;
-    font-weight: 400;
     text-align: start;
     color: #fff;
   }
-  .section-wrapper-block .price {
+  .section-wrapper-price .price {
     font-size: 2rem;
     font-weight: 700;
     color: #0D7EE5;
     margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-initiatie {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-initiatie .title-initiatie {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .section-wrapper-initiatie p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-initiatie .time-initiatie {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-initiatie h4 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen {
+    margin: 0.5rem 0;
+  }
+  .section-wrapper-duikplaatsen .title-duikplaatsen {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper .title-duik {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0D7EE5;
+    margin: 0.75rem 0 0.4rem 0;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper ul {
+    list-style: none;
+    text-decoration: none;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper li {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
+  }
+  .section-wrapper-duikplaatsen .duik-wrapper p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: start;
+    color: #fff;
   }
 }
 .container-agenda {
