@@ -22,7 +22,7 @@
 				meer</p>
 		</div>
 	</div>
-	<div class="info">
+	<div class="info width-fix">
 		<div class="info-content">
 			<h1>Niets is minder waar!</h1>
 			<p>Wil je leren duiken of gewoon gezellig duiken in een
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section width-fix">
 		<h1 class="section-title">Opkomende Duiken</h1>
 		<div class="section-wrapper">
 			{% for duiken in craft.entries.section('duiken').datum('>= ' ~ "now"|date("Y-m-d")).limit(8).orderBy('datum').all() %}

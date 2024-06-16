@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 2597aab7-1377-44de-bca2-ba1e6b9b2113 # Page
-handle: agenda
+  - 16f08275-87ec-45d9-b8ba-3e84c813f040 # Contact
+handle: contact
 maxAuthors: 1
-name: Agenda
+name: Contact
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   82d7d074-f812-4c3c-a7c2-e94695f6b1f4: # Duikclub Dolfijn
     enabledByDefault: true
     hasUrls: true
-    template: _agenda.twig
-    uriFormat: leden/agenda
+    template: _contact
+    uriFormat: contact
 type: single

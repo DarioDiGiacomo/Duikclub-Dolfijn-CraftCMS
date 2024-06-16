@@ -56,27 +56,6 @@
 				<div class="line"></div>
 				<div class="line"></div>
 			</div>
-
-			{# <div id="menu-overlay">
-            <ul>
-                <li><a href="../html/duiken.html">Duiken</a></li>
-                <li><a href="#">Gallerij</a></li>
-                <li><a href="../html/evenementen.html">Evenementen</a></li>
-                <li id="leden-wrapper">
-                    <a href="#" id="leden-link" onclick="toggleSubmenu(event)">Leden <i class="fa-solid fa-chevron-down fa-xs"></i></a>
-                    <ul class="submenu" id="leden-submenu">
-                        <li><a href="#">Agenda</a></li>
-                        <li><a href="#">Ice lijst</a></li>
-                        <li><a href="#">Documenten</a></li>
-                        <li><a href="#">Boetiek</a></li>
-                        <li><a href="#">Clubreizen</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Over ons</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div> #}
-
 			<div id="menu-overlay">
 				<ul>
 					{% for link in header.navlinks.all()|slice(0, 3) %}
@@ -88,7 +67,11 @@
 					{% for link in header.navlinks.all()|slice(3, 1) %}
 						{% set destination = link.linkDestination.one() %}
 						<li id="leden-wrapper">
+						{% if currentUser %}
                     	<a href="{{ destination.url }}" id="leden-link" onclick="toggleSubmenu(event)">{{ link.title }} <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+						{% else %}
+						<a style="color: grey" id="leden-link" >{{ link.title }} <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+						{% endif %}
 					{% endfor %}
                     <ul class="submenu" id="leden-submenu">
 					{% for link in ledenNavigatie.navlinks.all() %}

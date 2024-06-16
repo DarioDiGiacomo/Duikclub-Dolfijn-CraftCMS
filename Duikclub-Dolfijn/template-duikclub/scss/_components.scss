@@ -66,8 +66,10 @@
                 justify-content: center;
                 border: 2px solid transparent;
                 margin: 0;
+                transition: padding .2s ease-in-out;
 
                 &.active {
+                    transition: padding .2s ease-in-out;
                     border: 2px solid $color-primary;
                     padding: 1.5rem 2rem;
                     border-radius: 1%;
@@ -504,6 +506,7 @@
                     #leden-link {
                         margin: 0;
                     }
+
                     li {
                         a {
                             margin: 0;

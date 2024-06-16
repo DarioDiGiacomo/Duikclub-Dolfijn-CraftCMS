@@ -1,6 +1,4 @@
 {% extends 'index' %}
-{% requireLogin %}
-
 
 {% set gallerijEntries = craft.entries.section('gallerij').all() %}
 {% set tags = craft.entries.section('tags').all() %}
@@ -35,7 +33,7 @@
 
 {% block content %}
 
-	<div class="section">
+	<div class="section width-fix">
 		<h1 class="section-title">{{ pageTitle }}</h1>
 
 		<button class="section-filter-button standard-button" id="toggle-filter" onclick="toggleFilters()">Filters</button>
